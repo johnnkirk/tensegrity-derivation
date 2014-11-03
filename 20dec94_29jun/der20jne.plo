@@ -1,0 +1,47 @@
+set terminal latex
+set output "derplot1.tex"
+set xlabel "$\phi$ axis"
+set ylabel "$d$ axis"
+set xtics 0, pi/16
+set nokey
+set nozeroaxis
+set format x "$%.2f$"
+set title "$d(\phi) = \frac{4 \cos\phi \sin\phi - 1 + \
+\sqrt{\left(1 - 4 \cos\phi \sin\phi \right)^2 + \
+8 \left( \cos^2\phi \sin\phi +  \sin^2\phi \cos\phi \right) \
+\left(\cos\phi + \
+\sin\phi \right)}}{-2 \sqrt{2} \left(\cos\phi + \sin\phi \right)}$ \\[0.5cm]"
+d1(x) = (4*(cos(x)*sin(x)) - 1 + sqrt((1 - 4*(cos(x)*sin(x)))*(1 - 4*(cos(x)*sin(x))) + 8*((cos(x)*(cos(x)*sin(x))) + (sin(x)*(sin(x)*cos(x))))*(cos(x) + sin(x)))) / (- 2*sqrt(2)*(cos(x) + sin(x))) 
+plot [x=0:pi/2] d1(x) 
+
+
+set output "derplot2.tex"
+set size 1.25, 1.25
+set ytics 0.475, .025
+set title "$ d(\phi) = \frac{1 - 4 \cos\phi \sin\phi + \
+\sqrt{\left(1 - 4 \cos\phi \sin\phi \right)^2 + \
+8 \left( \cos^2\phi \sin\phi +  \sin^2\phi \cos\phi \right) \
+\left(\cos\phi + \sin\phi \right)}}{2 \sqrt{2} \left(\cos\phi + \
+\sin\phi \right)}$ \\[0.5cm]"
+d(x) =  ((sqrt((1 - 4*(cos(x)*sin(x)))*(sin(x)*sin(x) - 4*(cos(x)*sin(x)) + cos(x)*cos(x)) + 8*((cos(x)*(cos(x)*(sin(x)))) + (sin(x)*(sin(x)*(cos(x)))))*(cos(x) + sin(x))) + 1 - (4*(cos(x)*sin(x)))) / (2*(cos(x)*sqrt(2) + (sin(x)*sqrt(2)))))
+plot [x=0:pi/2] [0.475:0.725] d(x) 
+
+set output "derplot3.tex"
+set size 1, 1
+set ytics
+set title "$2 \sqrt{2} \left(\cos\phi + \sin\phi \right)$ \\[0.5cm]"
+d2(x) = (2*(cos(x)*sqrt(2) + (sin(x)*sqrt(2))))
+plot [x=0:pi/2] d2(x)
+
+set output "derplot4.tex"
+set title "$ \left(1 - 4 \cos\phi \sin\phi \right)^2 + \
+8 \left( \cos^2\phi \sin\phi +  \sin^2\phi \cos\phi \right) \
+\left(\cos\phi + \sin\phi \right) $ \\[0.5cm]"
+d3(x) = ((1 - 4*(cos(x)*sin(x)))*(sin(x)*sin(x) - 4*(cos(x)*sin(x)) + cos(x)*cos(x)) + 8*((cos(x)*(cos(x)*(sin(x)))) + (sin(x)*(sin(x)*(cos(x)))))*(cos(x) + sin(x)))
+plot [x=0:pi/2] d3(x)
+
+set output "derplot5.tex"
+set title "$1 - 4 \cos\phi \sin\phi$ \\[0.5cm]"
+d4(x) = (1 - (4*(cos(x)*sin(x))))
+plot [x=0:pi/2] d4(x)
+

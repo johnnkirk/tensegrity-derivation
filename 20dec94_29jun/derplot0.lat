@@ -1,0 +1,41 @@
+% file: derplot0.lat
+\documentstyle[12pt]{article}
+\pagestyle{empty}
+% \topmargin 0in
+% \evensidemargin 0in
+% \oddsidemargin 0in
+% \headheight 0in
+% \headsep 0in
+% \textwidth 10in\textheight 7.25in % \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+\oddsidemargin 0in
+% \oddsidemargin 0.25in
+\textwidth 6.5in
+% \textwidth 6.25in
+\date{May 22, 1994}
+\begin{document}
+% Now for lots and lots of plots!  First the plot of the $d(\phi)$ which
+% is not valid (Solution I).\\[0.5cm]
+
+  \begin{center}
+    \input derplot1.tex
+    \end{center}
+  \newpage
+  \begin{center}
+    \input derplot2.tex
+    \end{center}
+  \newpage
+  \begin{center}
+    \input derplot3.tex
+    \end{center}
+  \newpage
+  \begin{center}
+    \input derplot4.tex
+    \end{center}
+  \newpage
+  \begin{center}
+    \input derplot5.tex
+    \end{center}
+\end{document}
+

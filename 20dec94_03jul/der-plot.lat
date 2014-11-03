@@ -1,0 +1,40 @@
+\documentstyle[12pt]{article}
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin 0in\headheight
+0in\headsep 0in
+\textwidth 7.5in\textheight 10in % \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in
+% \textwidth 6.25in
+\date{May 22, 1994}
+\begin{document}
+ \begin{center}
+   \input derplot1.tex
+\\[1.5cm]
+\newpage
+   \input derplot2.tex
+\\[1.5cm]
+\newpage
+   \input derplot3.tex
+\\[1.5cm]
+\newpage
+   \input derplot4.tex
+\\[1.5cm]
+\newpage
+   \input derplot5.tex
+\newpage
+$$d' = \frac{\frac{32 \cos(2 \phi) \cos\phi \sin\phi}{\sqrt{32
+\cos\phi^2 \sin\phi^2 + 1}} - 4 \cos(2 \phi)}{2 \sqrt{2} (\sin\phi +
+\cos\phi)} -
+\frac{\frac{\sqrt{2}}{2} (\sqrt{32 \cos\phi^2 \sin\phi^2 + 1} - 4
+\cos\phi \sin\phi + 1) (\cos\phi - \sin\phi)}{2 (\sin\phi +
+\cos\phi)^2}$$
+   \input derplot6.tex
+\\[1.5cm]
+\newpage
+   \input derplot7.tex
+ \end{center}
+\end{document}

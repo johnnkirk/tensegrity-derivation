@@ -1,0 +1,53 @@
+set size 1.15, 1.15
+set terminal latex
+set xlabel "$\phi$ axis (in radians)"
+set ylabel "$y$ axis"
+set xtics 0, pi/8
+set ytics
+set nokey
+set nozeroaxis
+set format x "$%.2f$"
+set format y "$%.2f$"
+set output "dertrg1.tex"
+set title "$\cos\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(x)
+
+set output "dertrg2.tex"
+set title "$\sin\phi$ \\[0.5cm]"
+plot [x=0:pi] sin(x)
+ 
+set output "dertrg3.tex"
+set title "$\cos\phi + \sin\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(x) + sin(x)
+
+set output "dertrg4.tex"
+set title "$\cos^2\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(x)*cos(x)
+
+set output "dertrg5.tex"
+set title "$\sin^2\phi$ \\[0.5cm]"
+plot [x=0:pi] sin(x)*sin(x)
+
+set output "dertrg6.tex"
+set title "$\cos(2\phi)$ \\[0.5cm]"
+plot [x=0:pi] cos(2*x)
+ 
+set output "dertrg7.tex"
+set title "$\cos(2\phi)\cos\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(2*x)*cos(x)
+
+set output "dertrg8.tex"
+set title "$\cos(2\phi)\sin\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(2*x)*sin(x)
+
+set output "dertrg9.tex"
+set title "$\cos^2(2\phi)$ \\[0.5cm]"
+plot [x=0:pi] cos(2*x)*cos(2*x)
+
+set output "dertrg10.tex"
+set title "$\cos\phi\sin\phi$ \\[0.5cm]"
+plot [x=0:pi] sin(x)*cos(x)
+ 
+set output "dertrg11.tex"
+set title "$\cos^2\phi\sin^2\phi$ \\[0.5cm]"
+plot [x=0:pi] cos(x)*cos(x)*sin(x)*sin(x)

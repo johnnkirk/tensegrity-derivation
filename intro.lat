@@ -1,0 +1,134 @@
+% file: intro.lat.lat
+\documentstyle[12pt]{article}
+\pagestyle{empty}
+\topmargin -.5in
+\textheight 9.0in
+% \oddsidemargin -0.75in
+% \oddsidemargin 0.25in
+% \textwidth 7.75in 
+% \textwidth 6.25in
+\date{March 15, 1994}
+\begin{document}
+  \begin{center}\large\bf 
+    Historical Perspective \\ 
+    on John Kirk's\\
+    Tensegrity Geometry Research\end{center}
+  In 1948, a class of structures was invented by Kenneth Snelson
+    while attending a workshop at Black Mountain College
+    under the auspices of Buckminster Fuller.
+  The distinguishing feature of these forms is separation of
+    the structural functions of tension and compression 
+    into separate physical components of the final construction.
+  
+  In the unsuing years, Snelson pursued a successful career as a sculptor
+    and installed many of these structures in architectural settings.
+  These sculptures all embody great beauty and grace and tend to inspire
+    a kind of awe in the observer because of their departure 
+    from the traditional ``brick-upon-brick, up from the solid foundation''
+    building metaphor.
+  They seem to hold their shape magically --- as if 
+    they somehow ``shouldn't work'', structurally.
+  Even in structures that include tension in important ways
+    (such as suspension bridges and sailboats),
+    the convention has been to build a ``strong, solid, central tower''
+    from which the details may be ``hung'' in tension.
+
+  Buckminster Fuller was intrigued with understanding and popularizing 
+    the principles demonstrated by this kind of construction.
+  He contended that these principles are the implicit basis 
+    for all structural form in the universe, and at all levels of scale 
+    (from the sub-atomic, through the architectural, to the interplanetary).
+  For one thing, the principle helped a great deal in conceptualizing
+    and understanding the problems encountered by the many people
+    who tried to build the geodesic domes he had invented and popularized.
+  The joints, where several structural components connected to each other,
+    tended to work themselves apart thus letting-in rainwater, et cetera.
+  The orthogonality (right-angled-ness) of joints in conventional structures
+    simplifies the distribution of forces in a way 
+    that allows a number of structural considerations to be neglected
+    in these cases.
+  
+  Fuller coined the term, {\em tensegrity}, 
+    which he applied to both the principle 
+    and also the special class of constructions that explicitly articulate it.
+  The term is easy to say, while shortening the two-word ``tension integrity'',
+    which emphasizes role of tension in assuring structural integrity
+    of a construction.
+  A feature Fuller notes 
+    about the special class of structures called {\em tensegrity}
+    is that the tension components (cables, strings, tendons) all interconnect
+    to form a continuous network spanning the entire construction,
+    while the members that bear compression (struts, sticks, spars) 
+    are each isolated from the others
+    and each connected directly only to tension members.
+  Fuller refers to this phenomenon as the struts being {\em islands}
+    in a {\em sea of tension} cabling.
+
+  My own work with what Fuller termed {\em tensegrity} 
+    originated in the 1960's due to Fuller's lament that the existing
+    computerized finite-element analysis methods 
+    for doing engineering calculations 
+    gave inadequate results for the purposes of
+    building geodesic domes or other tensegrity-based forms.
+  I didn't have the background to confirm whether those methods
+    were inherently inadequate, or whether instead the problems 
+    might have been due to other causes.
+  I had, at that time, done the computer implementation work 
+    for this kind of software product and could see value in the idea
+    of resolving all forces (including torque, bending, shear, etc.) 
+    into conceptual components of only pure tension or pure compression.
+  
+  The issue in general is that simplifications must always be made 
+    in order to construct a conceptual model that will be helpful to people
+    in coping, planning, designing, etc., 
+    in the real world with all its complexity.
+  The hope is that the model will include all of the relevant features
+    of the real world situation while eliminating the myriad detail
+    that is irrelevant to the purposes at hand.
+  The issue in specific, here, might be that 
+    some aspects of structural behavior were not being explicitly modelled
+    by conventional finite-element analysis methods,
+    but were being accounted for by fixed-value ``fudge-factors'' 
+    chosen large enough to account for the range of variation
+    of certain parameters.
+  Perhaps a tensegrity analysis would allow conceptualization
+    at a finer degree of granularity, substituting more detailed modelling
+    for fixed-value estimates.
+
+  My thought at the time was that, 
+    assuming one of Fuller's university students had done 
+    something like a PhD dissertation on the mathematics of tensegrity,
+    I could just incorporate those results 
+    into one of the computerized engineering programs for analysis and design.
+  Perish the thought!
+  I discovered, over the years, that almost everyone 
+    who has worked with tensegrity has build or drawn pictures of the forms
+    by ``cut and try'' methods, based on symmetry considerations, etc.,
+    but nearly no-one has done much theoretical work in the area.
+  (In the last few years, several university efforts have begun to study
+    this class of structures, but I am at this point embarrassingly ignorant
+    of the details of their work.)
+
+  In a nutshell, my approach has been 
+    to solve the force-equilibrium equasions
+    (for a tensegrity structure which holds a stable shape)
+    which state that all the vector forces add to zero
+    for each joint where tension and compression elements connect.
+  Such a statement defines what it is to be a tensegrity form
+    in the simplest possible way.
+  Such a statement, written in mathematical format, becomes an object
+    which can be manipulated and re-arranged according to mathematical rules,
+    until a resulting form emerges which directly reveals
+    exactly the information one needs to construct the tensegrity form itself.
+  For instance, if you decide to make one of these structures 
+    with a strut whose length is two feet, 
+    the resulting formulas tell how long to make the corresponding cables, 
+    and at what locations in space each of the joints will reside.
+
+  At present I have results for the six-strut form which corresponds to
+    the tetrahedron and its dual tetrahedron, and for the twelve-strut form
+    which corresponds to the duality between the octahedron and the cube.
+  Current status of this work-in-progress is more fully described elsewhere,
+    as are plans for further efforts.
+  \end{document}
+

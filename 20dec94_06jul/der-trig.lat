@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin 0in
+\headheight 0in\headsep 0in
+\textwidth 7.5in\textheight 10in
+% \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in
+% \textwidth 6.25in
+\date{June 30, 1994}
+\begin{document}
+Here are several basic trigonometric functions and their graphs.
+ \begin{center}
+   \input dertrg1.tex
+% \\[1.5cm]
+% \newpage
+%    \input dertrg2.tex
+% \newpage
+%    \input dertrg3.tex
+% \\[1.5cm]
+% \newpage
+%    \input dertrg4.tex
+% \newpage
+%    \input dertrg5.tex
+% % \\[1.5cm]
+% \newpage
+%    \input dertrg6.tex
+% \newpage
+%    \input dertrg7.tex
+% \newpage
+%    \input dertrg8.tex
+% \newpage
+%    \input dertrg9.tex
+% \newpage
+%    \input dertrg10.tex
+% \newpage
+%    \input dertrg11.tex
+ \end{center}
+\end{document}
+

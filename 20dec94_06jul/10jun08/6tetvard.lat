@@ -1,0 +1,54 @@
+% file: 6tetvard.lat
+\documentclass[12pt]{article}
+% \input dratex.sty
+% \input aldratex.sty
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin -0.25in
+\headheight -0.3in\headsep 0in
+\textwidth 6.25in\textheight 10in
+% \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in 
+% \textwidth 6.25in
+\date{June 10, 2008}
+\setcounter{page}{4}
+\begin{document}
+  \begin{center}\Large\bf 
+    Tensegrity Geometry Derivation Results\\[3mm]
+    {\small\em John Kirk}\end{center}
+  \bigskip\bigskip
+  \begin{center}
+    \large\bf
+    Six-strut Tensegrity\\
+    \normalsize
+    (corresponds to the tetrahedron-tetrahedron duality)
+    \end{center}
+  \bigskip\bigskip
+  Lengths when strut length is 2:
+  \bigskip
+  \[ d = \frac{4\sin^2(\phi)-1+\sqrt{1+8(1-2\sin^2(\phi))^2}}
+              {4\cos(\phi)} \]
+  \bigskip\bigskip
+  \[ short = \sqrt{2}\sqrt{d^2-d(\cos(\phi)+\sin(\phi))-\cos(\phi)sin(\phi)+1} \]
+  \bigskip\bigskip
+  \[ long = \sqrt{2}\sqrt{d^2-d(\cos(\phi)-\sin(\phi))+\cos(\phi)\sin(\phi)+1} \]
+  \bigskip\bigskip\bigskip\bigskip
+  \begin{center}
+    \large\bf
+    Twelve-strut Tensegrity\\
+    \normalsize
+    (corresponds to the octrahedron-cube duality)
+    \end{center}
+  \bigskip\bigskip
+  Lengths when strut length is 2:
+  \bigskip
+  \[ d = \frac{\frac{\sqrt{2}}{2}-\sin(\phi)\cos(\phi)+\sqrt{4\sin^2(\phi)\cos^2(\phi)+\frac{1}{2}}}
+              {\cos(\phi)+\sqrt{2}\sin(\phi)} \]
+  \bigskip\bigskip
+  \[ short = \sqrt{d^2-2\sqrt{2}\cos(\phi)d-\cos^2(\phi)+3} \]
+  \bigskip\bigskip
+  \[ long = \sqrt{d^2-2\sin(\phi)d+\cos^2(\phi)+1} \]
+  \end{document}

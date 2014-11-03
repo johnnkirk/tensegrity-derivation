@@ -1,0 +1,47 @@
+set size 1.15, 1.15
+set terminal latex
+set output "derplot1.tex"
+set xlabel "$\phi$ axis (in radians)"
+set ylabel "$d$ axis"
+set xtics 0, pi/16
+set nokey
+set nozeroaxis
+set format x "$%.2f$"
+set title "$ d(\phi) = \frac{ 1 - 4 \cos\phi \sin\phi - \sqrt{32 \cos^2\phi \sin^2\phi + 1}}{2 \sqrt{2}(\sin\phi + \cos\phi)} $ \\[0.5cm]"
+d1(x) = (1 - 4*(cos(x)*sin(x)) - sqrt(32*(cos(x)**2*sin(x)**2) + 1)) / (2*(sqrt(2)*(sin(x) + cos(x))))
+plot [x=0:pi/2] d1(x) 
+
+
+set output "derplot2.tex"
+#set ytics 0.475, .025
+set title "$ d(\phi) = \frac{ 1 - 4 \cos\phi \sin\phi + \sqrt{32 \cos^2\phi \sin^2\phi + 1}}{2 \sqrt{2}(\sin\phi + \cos\phi)} $ \\[0.5cm]"
+d(x) = (1 - 4*(cos(x)*sin(x)) + sqrt(32*(cos(x)**2*sin(x)**2) + 1)) / (2*(sqrt(2)*(sin(x) + cos(x))))
+#plot [x=0:pi/2] [0.475:0.725] d(x) 
+plot [x=0:pi/2] d(x) 
+
+set output "derplot3.tex"
+set ytics
+set title "$ \sqrt{32 \cos^2\phi \sin^2\phi + 1}$ \\[0.5cm]"
+d2(x) = sqrt(32*(cos(x)**2*sin(x)**2) + 1)
+plot [x=0:pi/2] d2(x)
+
+set output "derplot4.tex"
+set title "$ 1 - 4 \cos\phi \sin\phi $ \\[0.5cm]"
+d3(x) = 1 - 4*(cos(x)*sin(x))
+plot [x=0:pi/2] d3(x)
+
+set output "derplot5.tex"
+set title "$ 2 \sqrt{2}(\sin\phi + \cos\phi) $ \\[0.5cm]"
+d4(x) = (2*(sqrt(2)*(sin(x) + cos(x))))
+plot [x=0:pi/2] d4(x)
+
+set output "derplot6.tex"
+set title 
+d5(x) = (32*(cos(2*x)*(cos(x)*sin(x))) / sqrt(32*(cos(x)**2*sin(x)**2) + 1) - 4*cos(2*x)) / (2*(sqrt(2)*(sin(x) + cos(x)))) - 1./2 *((sqrt(32*(cos(x)**2*sin(x)**2) + 1) - 4*(cos(x)*sin(x)) + 1) *(sqrt(2)*(cos(x) - sin(x)))) / (sqrt(2)*((sin(x) + cos(x))*(sqrt(2)*(sin(x) + cos(x))))) 
+plot [x=0:pi/2] d5(x)
+
+set output "derplot7.tex"
+set title "Same as above, blown-up"
+set xtics 0, pi/32
+set ytics -0.03, 0.005
+plot [x=pi/8:3*pi/8] [-0.03:0.03] d5(x)

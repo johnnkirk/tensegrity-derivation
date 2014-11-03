@@ -1,0 +1,959 @@
+% file: der-6stt.lat
+\documentstyle[12pt]{article}
+% \input dratex.sty
+% \input aldratex.sty
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin 0in\headheight 0in\headsep 0in
+\textwidth 10in\textheight 7.25in % \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in 
+% \textwidth 6.25in
+\date{May 22, 1994}
+\setcounter{page}{4}
+\begin{document}
+  \begin{center}\large\bf 
+    Derivation of Six-Strut (Tetrahedral) Tensegrity Geometry\\
+    {\small\em John Kirk and Christopher J. Fearnley}\end{center}
+  \bigskip
+  If we now specify the geometry to be
+    a six-strut (tetrahedral) tensegrity structure, and
+    considered with respect to a right-handed cartesian coordinate system:
+  \begin{quote}\begin{enumerate}
+    \item whose origin, $S$, is at the center of gravity
+      of the entire spherical tensegrity, and
+    \item whose $Z$ axis passes through point  $P$ of strut $OPQ$, 
+      where point $P$ is distance $d$ from point $S$, and
+    \item whose $X$, $Y$ and $Z$ units are each equal to 
+      half the length of the strut (i.e. $\overline{PO}$), and
+    \item such that the axis of the strut lies at a 45 degree angle
+      from the $XZ$ and $YZ$ planes, with point $O$ in the quadrant
+      where both $X$ and $Y$ are positive.
+    \end{enumerate}\end{quote}
+  
+  \smallskip
+  Then the coordinates of each of the labelled points in the figure
+    can be written by inspection at three points in the rotation
+    by $\phi$, as the geometry is known at these points:
+  
+  $$\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+     \multicolumn{5}{c}{\phi = 0 \Longrightarrow
+                         d = \frac{\sqrt{2}}{2}}                            \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates}                                \\ [4pt]
+    O: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    P: && 0                   & 0                   &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    Q: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    A: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    B: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    C: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    D: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    E: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    F: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    G: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    H: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    I: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    J: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    S: && 0                   & 0                   & 0                   & \\ [3pt]
+    \end{array}  \hspace{2cm}
+\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+  \multicolumn{5}{c}{\phi = \frac{\pi}{4} \Longrightarrow
+   d = \frac{1}{2}}                  \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates} \\ [4pt]
+    O: && 0            & 1            & \frac{1}{2}  & \\ [3pt]
+    P: && 0            & 0            & \frac{1}{2}  & \\ [3pt]
+    Q: && 0            & -1           & \frac{1}{2}  & \\ [3pt]
+    A: && \frac{1}{2}  & 0            & 1            & \\ [3pt]
+    B: && -\frac{1}{2} & 0            & 1            & \\ [3pt]
+    C: &&  -1          & \frac{1}{2}  & 0            & \\ [3pt]
+    D: && 1            & \frac{1}{2}  & 0            & \\ [3pt]
+    E: && 0            & 1            & -\frac{1}{2} & \\ [3pt]
+    F: && -1           & -\frac{1}{2} & 0            & \\ [3pt]
+    G: && \frac{1}{2}  & 0            & -1           & \\ [3pt]
+    H: && -\frac{1}{2} & 0            & -1           & \\ [3pt]
+    I: && 0            & -1           & -\frac{1}{2} & \\ [3pt]
+    J: && 1            & -\frac{1}{2} & 0            & \\ [3pt]
+    S: && 0            & 0            & 0            & \\ [3pt]
+    \end{array}  \hspace{2cm}
+\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+  \multicolumn{5}{c}{\phi = \frac{\pi}{2} \Longrightarrow
+   d = \frac{\sqrt{2}}{2}}                  \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates} \\ [4pt]
+    O: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    P: && 0                   & 0                   &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    Q: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    A: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    B: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    C: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    D: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+          -\frac{\sqrt{2}}{2} & \\ [3pt]
+    E: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+          -\frac{\sqrt{2}}{2} & \\ [3pt]
+    F: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    G: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    H: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+          -\frac{\sqrt{2}}{2} & \\ [3pt]
+    I: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+          -\frac{\sqrt{2}}{2} & \\ [3pt]
+    J: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+          -\frac{\sqrt{2}}{2} & \\ [3pt]
+    S: && 0                   & 0                   & 0
+& \\ [3pt]
+    \end{array}$$
+  
+  From this position, strut $OPQ$ can be rotated about the $Z$ axis 
+    through the angle $\phi$ (where $\phi$ is between $0$ and $\pi/2$) 
+    and translated to a distance $d$ from the origin
+    to get coordinate formulas for the general-case position of the strut.
+  To do this, we write a matrix consisting of the first three rows above,
+    but converted to {\em homogeneous coordinates}, 
+    by adding a fourth coordinate whose value is unity to each vector (row).
+  Then we post-multiply this coordinate matrix
+    by the bilinear transformation matrix for rotation about the $Z$ axis
+    and the translation:
+  $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}  & \frac{\sqrt{2}}{2}  & \frac{\sqrt{2}}{2} & 1 \\ [5pt]
+      0                   & 0                   & \frac{\sqrt{2}}{2} & 1 \\ [5pt]
+      -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \cos\phi & \sin\phi & 0                       & 0 \\ [5pt]
+      -\sin\phi & \cos\phi & 0                       & 0 \\ [5pt]
+      0         & 0        & 1                       & 0 \\ [5pt]
+      0         & 0        & -(\frac{\sqrt{2}}{2}-d) & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+                                                  0 & 0 & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 
+     \end{array}\right]$$
+
+%  \medskip
+    Top to back (for CD) --- rotate strut $OPQ$ -90 w/o $Z$, then -90 w/o $X$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & -1 & 0 & 0 \\ [5pt]
+     1 &  0 & 0 & 0 \\ [5pt]
+     0 &  0 & 1 & 0 \\ [5pt]
+     0 &  0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     1 & 0 &  0 & 0 \\ [5pt]
+     0 & 0 & -1 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]$$
+    
+%    \medskip
+    For $D$ and $C$ ($O \to D$ and $Q \to C$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+     -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1
+     \end{array}\right]$$
+
+%    \medskip
+    Top to left (for $BH$) --- rotate strut $OPQ$ -90 w/o $Z$, then -90 w/o $Y$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & -1 & 0 & 0 \\ [5pt]
+     1 &  0 & 0 & 0 \\ [5pt]
+     0 &  0 & 1 & 0 \\ [5pt]
+     0 &  0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 0 & 1 & 0 \\ [5pt]
+      0 & 1 & 0 & 0 \\ [5pt]
+     -1 & 0 & 0 & 0 \\ [5pt]
+      0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & -1 & 0 & 0 \\ [5pt]
+      0 &  0 & 1 & 0 \\ [5pt]
+     -1 &  0 & 0 & 0 \\ [5pt]
+      0 &  0 & 0 & 1 \end{array}\right]$$
+    
+%    \medskip
+    For $BH$ ($O \to B$ and $Q \to H$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & -1 & 0 & 0 \\ [5pt]
+      0 &  0 & 1 & 0 \\ [5pt]
+     -1 &  0 & 0 & 0 \\ [5pt]
+      0 &  0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     -d & \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+          \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+     -d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+         -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+     \end{array}\right]$$
+
+%    \medskip
+    Top to right (for $AG$) --- rotate strut $OPQ$ 90 w/o $Z$, then 90 w/o $Y$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 1 & 0 & 0 \\ [5pt]
+     -1 & 0 & 0 & 0 \\ [5pt]
+      0 & 0 & 1 & 0 \\ [5pt]
+      0 & 0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & -1 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     1 & 0 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]$$
+    
+%    \medskip
+    For $AG$ ($O \to A$ and $Q \to G$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+         \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+     d & \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+        -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+     \end{array}\right]$$
+  
+    \medskip
+    Top to front (for FJ) --- rotate strut $OPQ$ 90 w/o $Z$, then -90 w/o $X$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 &  1 & 0 & 0 \\ [5pt]
+    -1 &  0 & 0 & 0 \\ [5pt]
+     0 &  0 & 1 & 0 \\ [5pt]
+     0 &  0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     1 & 0 &  0 & 0 \\ [5pt]
+     0 & 0 & -1 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & -1 & 0 \\ [5pt]
+    -1 & 0 &  0 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]$$
+ 
+%    \medskip
+    For $F$ and $J$ ($O \to J$ and $Q \to F$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & -1 & 0 \\ [5pt]
+    -1 & 0 &  0 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 \\ [5pt]
+      \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1
+     \end{array}\right]$$
+
+    \medskip
+    Top to bottom (for EI) --- rotate strut $OPQ$ 180 w/o $X$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     1 &  0 &  0 & 0 \\ [5pt]
+     0 & -1 &  0 & 0 \\ [5pt]
+     0 &  0 & -1 & 0 \\ [5pt]
+     0 &  0 &  0 & 1 \end{array}\right]$$
+ 
+%    \medskip
+    For $E$ and $I$ ($O \to I$ and $Q \to E$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     1 &  0 &  0 & 0 \\ [5pt]
+     0 & -1 &  0 & 0 \\ [5pt]
+     0 &  0 & -1 & 0 \\ [5pt]
+     0 &  0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 
+     -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & -d & 1 \\ [5pt]
+      \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & -d & 1
+     \end{array}\right]$$
+ 
+  \medskip
+  So, in the general case:
+  $$\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+    point &  \multicolumn{5}{c}{coordinates}                          \\ [4pt]
+    O:  &&  \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+            \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & \\ [3pt]
+    P:  && 0                   & 0                           & d  & \\ [3pt]
+    Q:  &&  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+           -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & \\ [3pt]
+    A:  &&  d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)  &
+                \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)  & \\ [3pt]
+    B:  && -d &  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+                 \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & \\ [3pt]
+    C:  && -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+            \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)      & \\ [3pt]
+    D:  &&  \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+            \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)      & \\ [3pt]
+    E:  && \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+           \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & -d  & \\ [3pt]
+    F:  && \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+           \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)       & \\ [3pt]
+    G:  && d & \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+          -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)       & \\ [3pt]
+    H:  && -d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+           -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)      & \\ [3pt]
+    I:  && \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+          -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & -d  & \\ [3pt]
+    J:  && -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+            \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)     & \\ [3pt]
+    S:  && 0                   & 0                           & 0  & \\ [3pt]
+    \end{array}$$
+  
+  \medskip
+  Next, rotate the coordinate system $-\pi/4$, then $\phi$ around the $Z$ axis,
+    by use of the following transformation matrix:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & 0 & 0 \\ [5pt]
+     -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & 0 & 0 \\ [5pt]
+      0                  & 0                   & 1 & 0 \\ [5pt]
+      0                  & 0                   & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \cos\phi & -\sin\phi & 0 & 0 \\ [5pt]
+       \sin\phi &  \cos\phi & 0 & 0 \\ [5pt]
+      0         & 0        & 1 & 0 \\ [5pt]
+      0         & 0        & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 0 & 0 \\ [5pt]
+     \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 0 & 0 \\ [5pt]
+     0                      & 0                       & 1 & 0 \\ [5pt]
+     0                      & 0                       & 0 & 1 
+     \end{array}\right]$$
+    
+  \medskip
+  Applying the transformation to the points:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & 1 \\ [5pt]
+        0                   & 0                         & d  & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & 1 \\ [5pt]
+       d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)  &
+           \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)  & 1 \\ [5pt]
+      -d &  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+            \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)      & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)      & 1 \\ [5pt]
+        0                   & 0                         & 0  & 1
+      \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 0 & 0 \\ [5pt]
+     \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 0 & 0 \\ [5pt]
+     0                      & 0                       & 1 & 0 \\ [5pt]
+     0                      & 0                       & 0 & 1 
+     \end{array}\right]$$
+    
+    \medskip
+    The first point ($O$) is:
+    \begin{eqnarray*}
+  O & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                          \left(\cos\phi-\sin\phi\right)
+     -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                          \left(\cos\phi-\sin\phi\right)   &
+      \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)^2
+     +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)^2 &
+      d & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & \frac{1}{2}\left(\cos^2\phi-2\cos\phi\sin\phi+\sin^2\phi\right)
+   +\frac{1}{2}\left(\cos^2\phi+2\cos\phi\sin\phi+\sin^2\phi\right) & d & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & \frac{1}{2}\left(\cos^2\phi-2\cos\phi\sin\phi+\sin^2\phi
+       +\cos^2\phi+2\cos\phi\sin\phi+\sin^2\phi\right) & d & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 1 & d & 1 \\ [5pt]
+      \end{array}\right] \end{eqnarray*}
+
+    The second point ($A$) is:
+    \begin{eqnarray*}
+   A & = &\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)^2 &
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) +
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                           \left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+       \end{array}\right] \\
+     & = &\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+       \frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right)
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \end{eqnarray*}
+    
+    \medskip
+    The third point ($B$) is:
+    \begin{eqnarray*}
+  B & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)^2 &
+       \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+      +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      +\frac{1}{2}\left(\sin\phi-\cos\phi\right)^2 &
+       \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+      +\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \end{eqnarray*}
+    
+    \medskip
+    The fourth point ($C$) is:
+    \begin{eqnarray*}
+  C & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+      -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\sin\phi-\cos\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+      -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \end{eqnarray*}
+    
+    \medskip
+    The fifth point ($D$) is:
+    \begin{eqnarray*}
+  D & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\cos\phi-\sin\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \\
+    & = & \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+       \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right] \end{eqnarray*}
+  
+  \medskip
+  So, gathering all the points together:
+    $$\begin{array}{cc@{\Bigm[}c@{\:,\:}c@{\:,\:}cc@{\Bigm]}}
+ O: && 0 & 1 & d & \\[5pt]
+ A: && \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+     -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right) &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & \\[5pt]
+ B: && -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\sin\phi-\cos\phi\right)^2 &
+      \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right) &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & \\[5pt]
+ C: && -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & \\[5pt]
+ D: && \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & \\[5pt]
+     \end{array}$$
+  
+We can subtract $1$ from the $y$-coordinate and $d$ from the
+$z$-coordinate to center our coordinate system at point $O$.  Then we
+get:
+
+    $$\begin{array}{cc@{\Bigm[}c@{\:,\:}c@{\:,\:}cc@{\Bigm]}}
+ O: && 0 &  0 & 0 & \\[5pt]
+ A: && \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+     -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right) - 1 &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) - d & \\[5pt]
+ B: && -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\sin\phi-\cos\phi\right)^2 &
+      \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right) - 1 &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) - d & \\[5pt]
+ C: && -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) - 1 &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) - d & \\[5pt]
+ D: && \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) - 1 &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) - d & \\[5pt]
+     \end{array}$$
+
+Recall the equilibrium equation for our class of symmetrical
+   tensegrities:
+    $$\left(z_{OB}+z_{OC}\right)\left(x_{OA}+x_{OD}\right)
+     =\left(x_{OB}+x_{OC}\right)\left(z_{OA}+z_{OD}\right)$$
+
+By simple sustituting of coordinates we get:
+  $$(z_{B} + z_{C})(x_{A} + x_{D}) = (x_{B} + x_{C})(z_{A} + z_{D})$$
+ where $z_{p}$ and $x_{p}$ are the $z$ and $x$ components of point $p$
+ in our coordinate system centered at $O$.  
+Now looking at each factor in turn:
+\begin{eqnarray*}
+z_{B} + z_{C} & = & \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) - d
+      + \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) - d = 
+      \sqrt{2} \sin\phi - 2 d \nonumber\\
+x_{A} + x_{D} & = & \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 +
+      \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) \nonumber\\
+              & = & 2 \cos\phi \sin\phi + \sqrt{2} d \sin\phi \nonumber\\
+x_{B} + x_{C} & = & -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\sin\phi-\cos\phi\right)^2
+     -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+     +\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) \nonumber\\
+              & = & -2 \cos\phi \sin\phi - \sqrt{2} d \cos\phi \nonumber\\
+z_{A} + z_{D} & = & \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) - d
+    + \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) - d = 
+    \sqrt{2} \cos\phi - 2 d  \nonumber\\
+\end{eqnarray*}
+%==================== Calc Computations =============================
+% For z_{B} + z_{C}
+% 
+% (sqrt(2)/2)*(cos(x)+sin(x)) - d + (sqrt(2)/2)*(sin(x)-cos(x)) - d
+% 
+% sqrt(2) (cos(x) + sin(x)) / 2 - d + sqrt(2) (sin(x) - cos(x)) / 2 - d
+% 
+% sqrt(2) cos(x) / 2 + sqrt(2) sin(x) / 2 - d + sqrt(2) sin(x) / 2 
+%   - sqrt(2) cos(x) / 2 - d
+% 
+% sin(x) sqrt(2) - 2 d
+% 
+% 
+% For x_{A} + x_{D}
+% 
+% (sqrt(2)/2)*d*(sin(x)+cos(x)) -(1/2)*(cos(x)-sin(x))^2 +
+% (1/2)*(sin(x)+cos(x))^2 +(sqrt(2)/2)*d*(sin(x)-cos(x)) 
+% 
+% sqrt(2) d*(sin(x) + cos(x)) / 2 - 1:2 (cos(x) - sin(x))^2 
+%   + 1:2 (sin(x) + cos(x))^2 + sqrt(2) d*(sin(x) - cos(x)) / 2
+% 
+% sqrt(2) d sin(x) / 2 + sqrt(2) d cos(x) / 2 + sin(x) cos(x) - 1:2 cos(x)^2 
+%   + cos(x) sin(x) + 1:2 cos(x)^2 + sqrt(2) d sin(x) / 2 - sqrt(2) d cos(x) / 2
+% 
+% 2 cos(x) sin(x) + d sin(x) sqrt(2)
+% 
+% 
+% For x_{B} + x_{C}
+% 
+% -(sqrt(2)/2)*d*(sin(x)+cos(x)) +(1/2)*(sin(x)-cos(x))^2
+% -(1/2)*(sin(x)+cos(x))^2 +(sqrt(2)/2)*d*(sin(x)-cos(x)) 
+% 
+% 1:2 (sin(x) - cos(x))^2 - sqrt(2) d*(sin(x) + cos(x)) / 2 
+%   - 1:2 (sin(x) + cos(x))^2 + sqrt(2) d*(sin(x) - cos(x)) / 2
+% 
+% 1:2 sin(x)^2 - cos(x) sin(x) + 1:2 cos(x)^2 - sqrt(2) d sin(x) / 2 
+%   - sqrt(2) d cos(x) / 2 - 1:2 sin(x)^2 - cos(x) sin(x) - 1:2 cos(x)^2 
+%   + sqrt(2) d sin(x) / 2 - sqrt(2) d cos(x) / 2
+% 
+% -2 cos(x) sin(x) - d cos(x) sqrt(2)
+% 
+% 
+% For z_{A} + z_{D}
+% 
+% (sqrt(2)/2)*(cos(x)+sin(x)) - d + (sqrt(2)/2)*(cos(x)-sin(x)) - d 
+% 
+% sqrt(2) (cos(x) + sin(x)) / 2 - d + sqrt(2) (cos(x) - sin(x)) / 2 - d
+% 
+% sqrt(2) cos(x) / 2 + sqrt(2) sin(x) / 2 - d + sqrt(2) cos(x) / 2 
+%   - sqrt(2) sin(x) / 2 - d
+% 
+% cos(x) sqrt(2) - 2 d
+% Now to solve for d in terms of phi:
+% 
+% (z_{B} + z_{C})(x_{A} + x_{D}) = (x_{B} + x_{C})(z_{A} + z_{D})
+% 
+% (sin(x) sqrt(2) - 2 d)*(2 cos(x) sin(x) + d sin(x) sqrt(2)) =
+% (-2 cos(x) sin(x) - d cos(x) sqrt(2))*(cos(x) sqrt(2) - 2 d)
+% 
+% 
+% (sin(x) sqrt(2) - 2 d) (2 cos(x) sin(x) + d sin(x) sqrt(2)) 
+% = (d cos(x) sqrt(2) + 2 cos(x) sin(x)) (2 d - cos(x) sqrt(2))
+% 
+% 
+% 2 sin(x) sqrt(2) cos(x) sin(x) + sin(x) sqrt(2) d sin(x) sqrt(2) 
+%   - 4 d cos(x) sin(x) - 2 d^2 sin(x) sqrt(2) 
+%   = 2 d cos(x) sqrt(2) d - d cos(x) sqrt(2) cos(x) sqrt(2) + 4 cos(x) sin(x) d 
+%       - 2 cos(x) sin(x) cos(x) sqrt(2)
+%  
+%  sin(x)^2 cos(x) sqrt(2) + d sin(x)^2 - 4 d cos(x) sin(x) - d^2 sin(x) sqrt(2) 
+%    = d^2 cos(x) sqrt(2) - d cos(x)^2 - cos(x)^2 sin(x) sqrt(2)
+%  
+% First get all terms on the left of the = sign.  I eliminate the 0 so Calc can
+% process this better.
+% 
+% [calc-mode: symbolic: t]
+% [calc-mode: fractions: t]
+% 
+% (sin(x)^2 cos(x) sqrt(2) + d sin(x)^2 - 4 d cos(x) sin(x) - d^2 sin(x) sqrt(2)
+%    - d^2 cos(x) sqrt(2) + d cos(x)^2 + cos(x)^2 sin(x) sqrt(2))
+% 
+% (sin(x)^2 - 4 sin(x) cos(x) + cos(x)^2) d 
+%   - (sqrt(2) cos(x) + sqrt(2) sin(x)) d^2
+%   + sqrt(2) cos(x) sin(x)^2 + sqrt(2) sin(x) cos(x)^2
+% 
+% (1 - 4 sin(x) cos(x)) d - (sqrt(2) cos(x) + sqrt(2) sin(x)) d^2 
+%   + sqrt(2) cos(x) sin(x)^2 + sqrt(2) sin(x) cos(x)^2
+% 
+% Now we put the = sign back in so Calc can solve the quadratic equation (a P).
+% 
+% (1 - 4 sin(x) cos(x)) d - (sqrt(2) cos(x) + sqrt(2) sin(x)) d^2 
+%   + sqrt(2) cos(x) sin(x)^2 + sqrt(2) sin(x) cos(x)^2 = 0
+% 
+% [(4 cos(x) sin(x) - 1 
+%     + sqrt((1 - 4 cos(x) sin(x))^2 
+%   + 4 (cos(x)^2 sin(x) sqrt(2) + sin(x)^2 cos(x) sqrt(2)) 
+%       (sin(x) sqrt(2) + cos(x) sqrt(2)))) / -2 (sin(x) 2^1:2 + cos(x) 2^1:2), 
+%  (sqrt((1 - 4 cos(x) sin(x))^2 
+%          + 4 (cos(x)^2 sin(x) sqrt(2) + sin(x)^2 cos(x) sqrt(2)) 
+%   (sin(x) sqrt(2) + cos(x) sqrt(2))) + 1 - 4 cos(x) sin(x)) 
+%    / 2 (sin(x) 2^1:2 + cos(x) 2^1:2)]
+% 
+% Let's simplify what's under the large $\sqrt{}$ sign
+% 
+% ((1 - 4 cos(x) sin(x))^2
+%          + 4 (cos(x)^2 sin(x) sqrt(2) + sin(x)^2 cos(x) sqrt(2))
+%   (sin(x) sqrt(2) + cos(x) sqrt(2)))
+% 
+% 1 - 8 cos(x) sin(x) + 16 cos(x)^2 sin(x)^2 
+%   + 4 cos(x)^2 sin(x) sqrt(2) sin(x) sqrt(2) 
+%   + 4 cos(x)^2 sin(x) sqrt(2) cos(x) sqrt(2) 
+%   + 4 sin(x)^2 cos(x) sqrt(2) sin(x) sqrt(2) 
+%   + 4 sin(x)^2 cos(x) sqrt(2) cos(x) sqrt(2)
+% 
+% 8 sin(x)^2 cos(x)^2 + 8 cos(x) sin(x) cos(x)^2 + 8 sin(x) cos(x) sin(x)^2 
+%   + 8 cos(x)^2 sin(x)^2 + 1 - 8 sin(x) cos(x) + 16 sin(x)^2 cos(x)^2
+% 
+% 8 sin(x)^2 cos(x)^2 + 8 sin(x) cos(x) 
+%   + 8 cos(x)^2 sin(x)^2 + 1 - 8 sin(x) cos(x) + 16 sin(x)^2 cos(x)^2
+% 
+% 32 cos(x)^2 sin(x)^2 + 1
+% 
+% Now to recall the positive root, before we substitute this simplification
+% back in.
+% 
+%  (sqrt((1 - 4 cos(x) sin(x))^2
+%          + 4 (cos(x)^2 sin(x) sqrt(2) + sin(x)^2 cos(x) sqrt(2))
+%   (sin(x) sqrt(2) + cos(x) sqrt(2))) + 1 - 4 cos(x) sin(x))
+%    / 2 (sin(x) 2^1:2 + cos(x) 2^1:2)
+% 
+% (sqrt(32 cos(x)^2 sin(x)^2 + 1)
+%  + 1 - 4 cos(x) sin(x)) 
+%   / 2 (sin(x) 2^1:2 + cos(x) 2^1:2)
+% 
+% (sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(x) sin(x) + 1) 
+%   / 2 sqrt(2) (sin(x) + cos(x))
+%
+% [calc-mode: language: fortran]
+%
+%(1 - 4*(cos(x)*sin(x)) + sqrt(32*(cos(x)**2*sin(x)**2) + 1)) 
+%  / (2*(sqrt(2)*(sin(x) + cos(x))))
+% ================= End Calc Computation =============================
+Now we can set these factors equal to one another and solve for $d$.
+$$
+(\sqrt{2} \sin\phi - 2 d)(2 \cos\phi \sin\phi + \sqrt{2} d \sin\phi)
+= (-2 \cos\phi \sin\phi - \sqrt{2} d \cos\phi)(\sqrt{2} \cos\phi - 2
+d) $$
+$$ \Longleftrightarrow
+- \left(\sqrt{2} \cos\phi + \sqrt{2} \sin\phi\right) d^2
++ \left(1 - 4 \sin\phi \cos\phi\right) d 
++ \sqrt{2} \cos\phi \sin^2\phi + \sqrt{2} \sin\phi \cos^2\phi = 0 $$
+Using the quadratic formula $\left[ax^2+bx+c=0 \Longrightarrow x =
+ \frac{-b \pm\sqrt{b^2-4ac}}{2a}\right]$ we get
+\begin{eqnarray*}
+d(\phi) & = & \frac{ 1 - 4 \cos\phi \sin\phi
+\pm \sqrt{(1 - 4 \cos\phi \sin\phi)^2 + 4 (\sqrt{2} \cos^2\phi \sin\phi +
+\sqrt{2} \sin^2\phi \cos\phi) (\sqrt{2} \sin\phi +
+\sqrt{2} \cos\phi)}}{2 \sqrt{2}(\sin\phi + \cos\phi)} \\
+        & = & \frac{ 1 - 4 \cos\phi \sin\phi\pm \sqrt{
+32 \cos^2\phi \sin^2\phi + 1}}{2 \sqrt{2}(\sin\phi + \cos\phi)}
+\end{eqnarray*}
+The negative root can be shown to be absurd (its values for $d(\phi)$
+are negative which is not possible in our model). 
+  \newpage 
+We can also calculate $|OA|$ which is the length of the ``short'' tendon
+and $|OB|$, the length of the ``long'' tendon.  We get
+\begin{eqnarray*}
+|OA| & = & \sqrt{\left(x_{A} - x_{O}\right)^2 + \left(y_{A} -
+         y_{O}\right)^2 + \left(z_{A} - z_{O}\right)^2}\\
+     & = & \sqrt{\left(\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2\right)^2 +
+     \left(-\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right) - 1\right)^2 +
+     \left(\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) -
+     d\right)^2}\\
+     & = & \sqrt{
+       2 d^2 - 2 \sqrt{2} \cos\phi d + \cos^2\phi + \frac{1}{2} \sin^4\phi
+       + 2 \sin^2\phi + \frac{1}{2}
+    }  \\[0.3cm]
+|OB| & = & \sqrt{\left(x_{B} - x_{O}\right)^2 + \left(y_{B} -
+         y_{O}\right)^2 + \left(z_{B} - z_{O}\right)^2}\\
+     & = & \sqrt{\left(-\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\sin\phi-\cos\phi\right)^2\right)^2 +
+     \left(-\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right) - 1\right)^2 +
+     \left(\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) -
+     d\right)^2}\\
+     & = & \sqrt{
+        2 d^2 + d \left(\sqrt{2} \cos(2 \phi) \sin\phi -
+        \sqrt{2} \cos\phi \cos(2 \phi) - 2 \sqrt{2} \cos\phi \right) +
+        \sin^2\phi + \frac{1}{2}\cos^4\phi +
+        2 \cos^2\phi + \frac{1}{2}
+       }
+\end{eqnarray*}
+%=================== Calc Computations ===========================
+% Now to simplify the |OA| and |OB| with GNU Calc
+% 
+% |OA| = sqrt( (x_{A})^2 + (y_{A})^2 + z_{A}^2 )
+% let's look at and simplify what's under the sqrt()
+% 
+% [calc-mode: angles: rad]
+% 
+% (sqrt(2)*(d*(sin(x) + cos(x))) / 2 - 1./2*(cos(x) - sin(x))**2)**2 
+%   + (1./2*(cos(x)**2 - sin(x)**2) - sqrt(2)*(d*(sin(x) - cos(x))) / 2 - 1)**2 
+%   + (sqrt(2)*(cos(x) + sin(x)) / 2 - d)**2
+% 
+% [calc-mode: language: nil]
+% 
+% (sqrt(2) d*(sin(x) + cos(x)) / 2 - 0.5 (cos(x) - sin(x))^2)^2 
+%   + (0.5 (cos(x)^2 - sin(x)^2) - sqrt(2) d*(sin(x) - cos(x)) / 2 - 1)^2 
+%   + (sqrt(2) (cos(x) + sin(x)) / 2 - d)^2
+% 
+% 1:2 d^2 sin(x)^2 + 1:2 sqrt(2) d cos(x) sqrt(2) d sin(x) + 1:2 d^2 cos(x)^2 
+%   - 0.5 cos(x)^2 sqrt(2) d sin(x) - 0.5 cos(x)^2 sqrt(2) d cos(x) 
+%   + sin(x) cos(x) sqrt(2) d cos(x) + sin(x) cos(x) sqrt(2) d sin(x) 
+%   - 0.5 sin(x)^2 sqrt(2) d sin(x) - 0.5 sin(x)^2 sqrt(2) d cos(x) 
+%   + 0.25 cos(x)^4 - cos(x)^2 sin(x) cos(x) + 0.5 cos(x)^2 sin(x)^2 
+%   + sin(x)^2 cos(x)^2 - sin(x) cos(x) sin(x)^2 + 0.25 sin(x)^4 + 0.25 cos(x)^4 
+%   - 0.5 sin(x)^2 cos(x)^2 + 0.25 sin(x)^4 + 0.5 cos(x)^2 sqrt(2) d cos(x) 
+%   - 0.5 cos(x)^2 sqrt(2) d sin(x) + 0.5 sin(x)^2 sqrt(2) d sin(x) 
+%   - 0.5 sin(x)^2 sqrt(2) d cos(x) + sin(x)^2 - cos(x)^2 + 1:2 d^2 cos(x)^2 
+%   - 1:2 sqrt(2) d sin(x) sqrt(2) d cos(x) + 1:2 d^2 sin(x)^2 + sqrt(2) d sin(x) 
+%   - sqrt(2) d cos(x) + 1 + 1:2 cos(x)^2 + 1:2 sqrt(2) sin(x) sqrt(2) cos(x) 
+%   + 1:2 sin(x)^2 - d sqrt(2) cos(x) - d sqrt(2) sin(x) + d^2
+% 
+% -(cos(x)^3 sin(x)) - sin(x)^3 cos(x) + 0.5 cos(x)^4 + cos(x)^2 sin(x)^2 
+%   + 0.5 sin(x)^4 + d^2 cos(x)^2 + d^2 sin(x)^2 - cos(x)^2 / 2 + cos(x) sin(x) 
+%   + 3:2 sin(x)^2 - 2 d cos(x) sqrt(2) + d^2 + 1.
+% 
+% (cos(x)^2 + sin(x)^2 + 1) d^2 - 2 sqrt(2) cos(x) d - sin(x) cos(x)^3 
+%   - cos(x) sin(x)^3 + 0.5 cos(x)^4 + sin(x)^2 cos(x)^2 + 0.5 sin(x)^4 
+%   - cos(x)^2 / 2 + sin(x) cos(x) + 3:2 sin(x)^2 + 1.
+% 
+% 2 d^2 - 2 sqrt(2) cos(x) d - sin(x) cos(x)^3 - cos(x) sin(x)^3 + 0.5 cos(x)^4 
+%   + sin(x)^2 cos(x)^2 + 0.5 sin(x)^4 - cos(x)^2 / 2 + sin(x) cos(x) 
+%   + 3:2 sin(x)^2 + 1.
+%  
+% 2 d^2 - 2 d cos(x) sqrt(2) + 0.5 cos(x)^4 + cos(x)^2 sin(x)^2 + 0.5 sin(x)^4 
+%   - cos(x)^2 / 2 + 3:2 sin(x)^2 + 1
+% 
+% [calc-mode: language: fortran]
+% 
+% 2*d**2 - 2*(d*(cos(x)*sqrt(2))) + 0.5*cos(x)**4 + cos(x)**2*sin(x)**2 
+%   + 0.5*sin(x)**4 - cos(x)**2 / 2 + 3./2*sin(x)**2 + 1
+% 
+% [calc-mode: language: nil]
+% 
+% 2 d^2 - 2 d cos(x) sqrt(2) + 0.5 cos(x)^4 + cos(x)^2 sin(x)^2 + 0.5 sin(x)^4 
+%   - cos(x)^2 / 2 + 1.5 sin(x)^2 + 1
+% 
+% 2 d^2 - 2 d cos(x) sqrt(2) + 0.5 cos(x)^4 + 0.5 cos(x)^4
+%  - 0.5 cos(x)^4 + cos(x)^2 sin(x)^2 + 0.5 sin(x)^4 
+%  - cos(x)^2 / 2 - 0.5 sin(x)^2 + 0.5 sin(x)^2 + 1.5 sin(x)^2 + 1
+%
+% 2 d^2 - 2 d cos(x) sqrt(2) + cos(x)^2
+%  - 0.5 cos(x)^4 + 0.5 sin(x)^4 + 0.5 sin(x)^2 + 2 sin(x)^2 + 0.5
+%
+% |OB| =
+%  
+%  ((1:2 (sin(x) - cos(x))^2 - sqrt(2) d*(sin(x) + cos(x)) / 2)^2 
+%         + (1:2 (sin(x)^2 - cos(x)^2) - sqrt(2) d*(sin(x) - cos(x)) / 2 - 1)^2 
+%         + (sqrt(2) (cos(x) + sin(x)) / 2 - d)^2)
+% 
+% 1:4 sin(x)^4 - sin(x)^2 cos(x) sin(x) + 1:2 sin(x)^2 cos(x)^2 
+%   + cos(x)^2 sin(x)^2 - cos(x) sin(x) cos(x)^2 + 1:4 cos(x)^4 
+%   + sqrt(2) d sin(x) cos(x) sin(x) - 1:2 sqrt(2) d sin(x)^3 
+%   - 1:2 sqrt(2) d sin(x) cos(x)^2 + sqrt(2) d cos(x)^2 sin(x) 
+%   - 1:2 sqrt(2) d cos(x) sin(x)^2 - 1:2 sqrt(2) d cos(x)^3 + 1:2 d^2 sin(x)^2 
+%   + 1:2 sqrt(2) d cos(x) sqrt(2) d sin(x) + 1:2 d^2 cos(x)^2 + 1:4 sin(x)^4 
+%   - 1:2 cos(x)^2 sin(x)^2 + 1:4 cos(x)^4 + 1:2 sin(x)^2 sqrt(2) d cos(x) 
+%   - 1:2 sin(x)^2 sqrt(2) d sin(x) + 1:2 cos(x)^2 sqrt(2) d sin(x) 
+%   - 1:2 cos(x)^2 sqrt(2) d cos(x) + cos(x)^2 - sin(x)^2 + 1:2 d^2 cos(x)^2 
+%   - 1:2 sqrt(2) d sin(x) sqrt(2) d cos(x) + 1:2 d^2 sin(x)^2 + sqrt(2) d sin(x) 
+%   - sqrt(2) d cos(x) + 1 + 1:2 cos(x)^2 + 1:2 sqrt(2) sin(x) sqrt(2) cos(x) 
+%   + 1:2 sin(x)^2 - d sqrt(2) cos(x) - d sqrt(2) sin(x) + d^2
+% 
+% -(sin(x)^3 cos(x)) - cos(x)^3 sin(x) + sin(x)^4 / 2 + cos(x)^2 sin(x)^2 
+%   + cos(x)^4 / 2 + d sin(x)^2 cos(x) sqrt(2) - d sin(x)^3 sqrt(2) 
+%   + d cos(x)^2 sin(x) sqrt(2) - d cos(x)^3 sqrt(2) + d^2 cos(x)^2 
+%   + d^2 sin(x)^2 + 3:2 cos(x)^2 + cos(x) sin(x) - sin(x)^2 / 2 
+%   - 2 d cos(x) sqrt(2) + d^2 + 1
+% 
+% (2) d^2 + ( - sqrt(2) cos(x) (cos(2x)) + sqrt(2) sin(x) (cos(2x)) 
+%      - 2 sqrt(2) cos(x)) d
+%  + sin(x)^4 / 2 + sin(x)^2 cos(x)^2 + cos(x)^4 / 2 
+%  + 3:2 cos(x)^2 - sin(x)^2 / 2 + 1
+% 
+% 2 d^2 
+%   + d*(cos(2 x) sin(x) sqrt(2) - cos(x) cos(2 x) sqrt(2) - 2 cos(x) sqrt(2)) 
+%   + sin(x)^4 / 2 + cos(x)^2 sin(x)^2 + cos(x)^4 / 2 + 3:2 cos(x)^2 
+%   - sin(x)^2 / 2 + 1
+% 
+% [calc-mode: language: fortran]
+% 
+% 2*d**2 
+%   + d*(cos(2*x)*(sin(x)*sqrt(2)) - cos(x)*(cos(2*x)*sqrt(2)) - 2*(cos(x)*sqrt(2))) 
+%   + sin(x)**4 / 2 + cos(x)**2*sin(x)**2 + cos(x)**4 / 2 + 3./2*cos(x)**2 
+%   - sin(x)**2 / 2 + 1
+% 
+% [calc-mode: language: nil]
+% 
+% 2 d^2 
+%   + d*(cos(2 x) sin(x) sqrt(2) - cos(x) cos(2 x) sqrt(2) - 2 cos(x) sqrt(2)) 
+%   + sin(x)^4 / 2 + cos(x)^2 sin(x)^2 + cos(x)^4 / 2 + 1.5 cos(x)^2 
+%   - sin(x)^2 / 2 + 1
+%
+% 2 d^2 
+%   + d*(cos(2 x) sin(x) sqrt(2) - cos(x) cos(2 x) sqrt(2) - 2 cos(x) sqrt(2)) 
+%   + sin(x)^4 / 2 + 0.5 sin(x)^4 - 0.5 sin(x)^4 + cos(x)^2 sin(x)^2
+%   + cos(x)^4 / 2 + 1.5 cos(x)^2 + 0.5 cos(x)^2 - 0.5 cos(x)^2
+%   - sin(x)^2 / 2 + 1
+%
+% 2 d^2 
+%   + d*(cos(2 x) sin(x) sqrt(2) - cos(x) cos(2 x) sqrt(2) - 2 cos(x) sqrt(2)) 
+%   + sin(x)^2 - 0.5 sin(x)^4
+%   + cos(x)^4 / 2 + 2 cos(x)^2 + - 0.5 cos(x)^2 + 0.5
+%=================== End Calc Computations =========================
+Since the mininima and maxima points seem interesting, let's calculate
+the derivative of $d(\phi)$:
+$$
+d' = \frac{\frac{32 \cos(2 \phi) \cos\phi \sin\phi}{\sqrt{32 \cos\phi^2
+\sin\phi^2 + 1}} - 4 \cos(2 \phi)}{2 \sqrt{2} (\sin\phi + \cos\phi)} -
+\frac{\frac{\sqrt{2}}{2} (\sqrt{32 \cos\phi^2 \sin\phi^2 + 1} -
+4 \cos\phi \sin\phi + 1)
+(\cos\phi - \sin\phi)}{2 (\sin\phi + \cos\phi)^2}
+$$
+$d(\phi)$ is at a maximum when $d'(\phi) = 0$.  By numerical methods
+the derivative is 0 when...
+
+Sometimes it is desired to determine an unknown strut length given on
+the lenght of the two strings ($|OA|$ and $|OB|$).
+%================== Begin Calc Computations ========================
+%   (sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(x) sin(x) + 1)
+%     / 2 sqrt(2) (sin(x) + cos(x))
+%  
+% [calc-mode: symbolic: t]
+% [calc-mode: fractions: t]
+%  
+%  (16 (2 cos(x)^2 sin(x) cos(x) - 2 sin(x)^2 cos(x) sin(x)) 
+%     / sqrt(32 cos(x)^2 sin(x)^2 + 1) + 4 (sin(x)^2 - cos(x)^2)) 
+%    / 2 sqrt(2) (sin(x) + cos(x)) 
+%    - 1:2 (sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(x) sin(x) + 1) sqrt(2) 
+%        (cos(x) - sin(x)) / sqrt(2) (sin(x) + cos(x)) sqrt(2) (sin(x) + cos(x))
+%  
+%  (16 (2 cos(2x) cos(x) sin(x)) 
+%     / sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 (cos(2x))) 
+%    / 2 sqrt(2) (sin(x) + cos(x)) 
+%    - 1:2 (sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(x) sin(x) + 1) sqrt(2) 
+%        (cos(x) - sin(x)) / sqrt(2) (sin(x) + cos(x)) sqrt(2) (sin(x) + cos(x))
+%  
+% [calc-mode: language: fortran]
+%  
+%  (32*(cos(2*x)*(cos(x)*sin(x))) / sqrt(32*(cos(x)**2*sin(x)**2) + 1) 
+%     - 4*cos(2*x)) / (2*(sqrt(2)*(sin(x) + cos(x)))) 
+%    - 1./2
+%       *((sqrt(32*(cos(x)**2*sin(x)**2) + 1) - 4*(cos(x)*sin(x)) + 1)
+%          *(sqrt(2)*(cos(x) - sin(x)))) 
+%        / (sqrt(2)*((sin(x) + cos(x))*(sqrt(2)*(sin(x) + cos(x)))))
+%  
+% [calc-mode: language: nil]
+%  
+%  (32 cos(2 x) cos(x) sin(x) / sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(2 x)) 
+%    / 2 sqrt(2) (sin(x) + cos(x)) 
+%    - 0.5 (sqrt(32 cos(x)^2 sin(x)^2 + 1) - 4 cos(x) sin(x) + 1) sqrt(2) 
+%        (cos(x) - sin(x)) / 2 (sin(x) + cos(x))^2
+%  
+% [calc-mode: language: big]
+%  
+%  32 cos(2 x) cos(x) sin(x)
+%  -------------------------- - 4 cos(2 x)
+%    ________________________                       ________________________
+%   |          2       2                           |          2       2                              ___
+%  \| 32 cos(x)  sin(x)  + 1                 0.5 (\| 32 cos(x)  sin(x)  + 1  - 4 cos(x) sin(x) + 1) V 2  (cos(x) - sin(x))
+%  --------------------------------------- - -----------------------------------------------------------------------------
+%            ___                                                          4 sin(x) cos(x) + 2
+%         2 V 2  (sin(x) + cos(x))
+%  
+\end{document}

@@ -1,0 +1,188 @@
+% file: der22may.lat
+\documentstyle[12pt]{article}
+\input dratex.sty
+\input aldratex.sty
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin 0in\headheight 0in\headsep 0in
+\textwidth 10.25in\textheight 7.25in % \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in 
+% \textwidth 6.25in
+\date{May 22, 1994}
+\begin{document}
+  \begin{center}\large\bf 
+    Derivation of Tensegrity Geometry\\
+    {\small\em John Kirk}\end{center}
+  \bigskip
+%   \DrawOff
+   \Draw
+     \Object\strut(2){ \I=#2;\I+90;\RotatedAxes(#2,\Val\I)
+       \MarkXLoc(#1a)\MarkLoc(a)\Move(90,0)\MarkLoc(b)\MarkXLoc(#1b)
+       \Move(-30,5)\MarkLoc(d)\Move(-30,0)\MarkLoc(c)
+       \Move(0,-10)\MarkLoc(e)\Move(30,0)\MarkLoc(f)\Move(-60,5)
+       \Curve(a,c,d,b)\Curve(a,e,f,b)\EndRotatedAxes }
+     \PenSize(2pt)\Scale(2,2)\strut(1,-90)
+     \MoveToLoc(1a)\Move(20,-30)\strut[2a](2,-30)
+     \MoveToLoc(1a)\Move(-20,-60)\strut[3a](3,150)
+     \MoveToLoc(1a)\Move(30,5)\strut[4a](4,150)
+     \PenSize(.6pt)\MoveToLoc(1a){\LineToLoc(2a)\LineToLoc(1b)}
+       {\LineToLoc(3a)\LineToLoc(1b)}{\LineToLoc(4a)}{\LineToLoc(4b)}
+     \MoveToLoc(1a)\Move(2,6)\Text(--$O$--)
+     \MoveToLoc(1b)\Move(5,-2)\Text(--Q--)
+     \MoveToLoc(2a)\Move(-5,-1)\Text(--A--)
+     \MoveToLoc(3a)\Move(5,2)\Text(--B--)
+     \MoveToLoc(4a)\Move(3,-5)\Text(--D--)
+     \MoveToLoc(4b)\Move(-3,-6)\Text(--C--)
+     \MoveToLoc(1a)\MoveToCurve[.5](1a,1b,1a,1b)\Text(--P--)
+     \Move(30,-20)\Text(--{\small Sphere Center}~~$S$--)
+     \EndDraw
+  
+  \bigskip\bigskip
+  \begin{tabular}{rl}
+    If & $\left[\vec{F}_{PO}\right]$ is the compressive vector force 
+           exerted by the strut $OPQ$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OA}\right]$ is the tensive vector force 
+           exerted by the string $OA$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OB}\right]$ is the tensive vector force 
+           exerted by the string $OB$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OC}\right]$ is the tensive vector force 
+           exerted by the string $OC$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OD}\right]$ is the tensive vector force 
+           exerted by the string $OD$ upon point $O$\end{tabular}
+  
+  \smallskip
+  then the geometry of the tensegrity structure is completely characterized
+    by the force equilibrium equation for point $O$:
+  $$\left[\vec{F}_{PO}\right]
+   =\left[\vec{F}_{OA}\right]+\left[\vec{F}_{OB}\right]
+   +\left[\vec{F}_{OC}\right]+\left[\vec{F}_{OD}\right]$$
+\newpage  
+  which states that point $O$ is not moving because all applied forces
+    are in static equilibrium (no net force).
+  This can be restated 
+    (in more detail, separating magnitude from direction of force)
+    as follows:
+  $$m_{PO}\left[\vec{i}_{PO}\right]
+    =m_{OA}\left[\vec{i}_{OA}\right]+m_{OB}\left[\vec{i}_{OB}\right]
+    +m_{OC}\left[\vec{i}_{OC}\right]+m_{OD}\left[\vec{i}_{OD}\right]$$
+  where $m_{pq}$ is the magnitude 
+    and $\left[\vec{i}_{pq}\right]$ is the unit vector in the direction
+    from $p$ to $q$ of each force.
+  
+  Now, by symmetry strings $OA$ and $OD$ apply the same force to point $O$,
+    and similarly for strings $OB$ and $OC$, so:
+  $$m_{PO}\left[\vec{i}_{PO}\right]
+    =m_{ss}\left[\vec{i}_{OA}\right]+m_{ls}\left[\vec{i}_{OB}\right]
+    +m_{ls}\left[\vec{i}_{OC}\right]+m_{ss}\left[\vec{i}_{OD}\right]$$
+  where the force-magnitude subscripts $_{ss}$ and $_{ls}$ refer to 
+    the ``short'' and ``long'' strings in the diagram, respectively.
+  
+  \medskip
+  At this point, each of the force directions (the unit vectors)
+    can be represented as the direction of the structural component 
+    (strut or string) along which the force acts.
+  That is to say, if we represent each such component as a vector 
+    ($\vec{V}_{pq}$) from one of its endpoints, $p$, to the other, $q$,
+    oriented in the direction of action of the force along the component,
+    then we can take the direction of the force to be 
+    the direction of this vector.
+  This is written as the vector, $\vec{V}_{pq}$, 
+    divided by its length, $l_{pq}$, so:
+  $$\left[\vec{i}_{pq}\right]=\left[\frac{\vec{V}_{pq}}{l_{pq}}\right]$$
+  Substituting this expression for the force direction in the previous
+    equation:
+  $$m_{pq}\left[\vec{i}_{pq}\right]=
+    m_{pq}\left[\frac{\vec{V}_{pq}}{l_{pq}}\right]=
+    \frac{m_{pq}}{l_{pq}}\left[\vec{V}_{pq}\right]$$
+  
+  \medskip
+  so, therefore the equilibrium equation can be rewritten:
+  $$\frac{m_{PO}}{l_{PO}}\left[\vec{V}_{PO}\right]
+    =\frac{m_{ss}}{l_{ss}}\left[\vec{V}_{OA}\right]
+    +\frac{m_{ls}}{l_{ls}}\left[\vec{V}_{OB}\right]
+    +\frac{m_{ls}}{l_{ls}}\left[\vec{V}_{OC}\right]
+    +\frac{m_{ss}}{l_{ss}}\left[\vec{V}_{OD}\right]$$
+
+  \medskip
+  or, combining terms with identical coefficients:
+  $$\frac{m_{PO}}{l_{PO}}\left[\vec{V}_{PO}\right]
+    =\frac{m_{ss}}{l_{ss}}\left(\left[\vec{V}_{OA}\right]
+                         +\left[\vec{V}_{OD}\right]\right)
+    +\frac{m_{ls}}{l_{ls}}\left(\left[\vec{V}_{OB}\right]
+                         +\left[\vec{V}_{OC}\right]\right)$$
+  
+  \medskip
+  Now, if we consider only the components of force which act at point $O$ 
+    perpendicular to the axis ($OPQ$) of the strut, 
+    then the compressive force contributed by the strut will be zero, 
+    so this part of the force equilibrium equation is:
+  $$\left[\vec{0}\right]
+    =\frac{m_{ss}}{l_{ss}}\left(\left[\vec{R}_{OA}\right]
+                         +\left[\vec{R}_{OD}\right]\right)
+    +\frac{m_{ls}}{l_{ls}}\left(\left[\vec{R}_{OB}\right]
+                         +\left[\vec{R}_{OC}\right]\right)$$
+  where each of the vectors $R$ is the {\em component} 
+    of the corresponding vector $V$ in the previous equation, 
+    that lies in the plane orthogonal to the strut.
+
+  \newpage
+  \medskip
+  Then, once again, we may consider separately the forces acting at point $O$
+  \begin{enumerate}
+    \item parallel to the axis, $SP$, of rotation of the strut 
+        through the transformation angle parameter, $\phi$, and
+    \item perpendicular to the strut axis and in the plane 
+        of the transformation rotation through angle $\phi$
+    \end{enumerate}
+  The two resulting scalar equations can be written in terms of
+    $\phi$ --- the angular transformation parameter, and 
+    $d$ --- the distance of the strut (point $P$) 
+    from the center of spherical symmetry, $S$, of the entire structure.
+  The equations can then be solved simultaneously to derive in a formula
+    for $d$ in terms of $\phi$.
+
+%   \newpage
+  \medskip
+  The two equations are:
+  $$0=\frac{m_{ss}}{l_{ss}}\left(z_{OA}+z_{OD}\right)
+     +\frac{m_{ls}}{l_{ls}}\left(z_{OB}+z_{OC}\right)$$
+  and:
+  $$0=\frac{m_{ss}}{l_{ss}}\left(x_{OA}+x_{OD}\right)
+     +\frac{m_{ls}}{l_{ls}}\left(x_{OB}+x_{OC}\right)$$
+
+  \medskip
+  With only slight rearrangement, they become:
+  $$-\frac{m_{ss}l_{ls}}{l_{ss}m_{ls}}
+    =\frac{\left(z_{OB}+z_{OC}\right)}{\left(z_{OA}+z_{OD}\right)}$$
+  and
+  $$-\frac{m_{ss}l_{ls}}{l_{ss}m_{ls}}
+    =\frac{\left(x_{OB}+x_{OC}\right)}{\left(x_{OA}+x_{OD}\right)}$$
+
+  \medskip
+  Combining the two, in preparation for solution:
+    $$\frac{\left(z_{OB}+z_{OC}\right)}{\left(z_{OA}+z_{OD}\right)}
+     =\frac{\left(x_{OB}+x_{OC}\right)}{\left(x_{OA}+x_{OD}\right)}$$
+
+  \medskip
+  which is the same as:
+    $$\left(z_{OB}+z_{OC}\right)\left(x_{OA}+x_{OD}\right)
+     =\left(x_{OB}+x_{OC}\right)\left(z_{OA}+z_{OD}\right)$$
+
+  \medskip
+  \begin{quote}\small
+    {\bf Note:} Everything to this point has been done without reference
+        to any coordinate system, and without reference to any particular
+        spherical tensegrity (as to 3--symmetry, 4--symmetry, etc.).
+      We now introduce a coordinate system in order to write formulas
+        for the coordinates of each of the points that appear 
+        in the force equilibrium equation above, in terms of
+        the parameters, $d$ and $\phi$. 
+      When we have formulas for the coordinates, we will solve the equation
+        above for $d$ in terms of $\phi$, and will then be in a position
+        to produce formulas for all lengths and angles 
+        of the tensegrity structure as well as coordinates for all points. 
+      \end{quote}
+\end{document}

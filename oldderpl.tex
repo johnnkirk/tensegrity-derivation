@@ -1,0 +1,133 @@
+\documentstyle{article}
+\topmargin -.5in
+\evensidemargin -0.5in
+\oddsidemargin -0.5in
+\headheight 0in\headsep 0in
+% \date{20 June 1994}
+\setlength{\textwidth}{7.25in}
+% \setlength{\textheight}{10.35in}
+\setlength{\textheight}{9.5in}
+\begin{document}
+\begin{center} \Large\bf
+  Calculations and Graphs from J. Kirk's Original 6-Strut Tensegrity
+\end{center}
+
+Here is the verbatim text of the gnuplot program I wrote which generates
+plots for the original formula for $d$ in terms of $\phi$ in John Kirk's
+notes.
+
+\begin{verbatim}
+set terminal latex
+set output "plot1.tex"
+set xlabel "$\phi$ axis"
+set ylabel "$d$ axis"
+set nokey
+set xtics -pi/4, pi/16
+set ytics 0, 0.025
+set size 1.0, 1.25
+set nozeroaxis
+set format x "$%.2f$"
+set title "$d=\frac{4\sin^2\phi-1+\sqrt{1+8(1-2\sin^2\phi)^2}}{4\cos\phi}$"
+d(x)=((4.*(sin(x)**2))-1.+sqrt(1.+8.*(1.-2.*(sin(x)*sin(x)))*(1.-2.*(sin(x)*sin(x)))))/(4.*cos(x))
+plot [x=-pi/4:pi/4] [0.475:0.725] d(x) with lines
+\end{verbatim}
+Here is the graph of $d$ with respect to $\phi$:
+	\begin{center}
+		\input{plot1.tex}
+	\end{center}
+
+Here is Calc's processing of the $d(x)$ used in the gnuplot program:
+\begin{verbatim}
+((4.*(sin(x)**2))-1.+sqrt(1.+8.*(1.-2.*(sin(x)*sin(x)))*(1.-2.*(sin(x)*sin(x)))))/(4.*cos(x))
+\end{verbatim}
+
+Which Calc simplifies to:
+\begin{verbatim}
+(4. sin(x)^2 - 1. + sqrt(1. + 8. (1. - 2. sin(x)^2)^2)) / 4. cos(x)
+\end{verbatim}
+
+\newpage
+
+and in ``big'' notation:
+\begin{verbatim}
+		    ____________________________
+	 2         |                        2 2
+4. sin(x)  - 1. + \| 1. + 8. (1. - 2. sin(x) )
+------------------------------------------------
+		   4. cos(x)
+\end{verbatim}
+
+Now to get the derivative.  Here is the formula for $d(x)$ as it was
+when GNU Calc began it's derivation of the derivative.
+\begin{verbatim}
+(4. sin(x)^2 - 1. + sqrt(1. + 8. (1. - 2. sin(x)^2)^2)) / 4. cos(x)
+
+% [calc-mode: language: nil]
+% [calc-mode: symbolic: nil]
+% [calc-mode: fractions: nil]
+% [calc-mode: angles: rad]
+\end{verbatim}
+
+Here is the derivative $d'(x)$:
+\begin{verbatim}
+(8. sin(x) cos(x) 
+   - 32. (1. - 2. sin(x)^2) sin(x) cos(x) / sqrt(1. + 8. (1. - 2. sin(x)^2)^2)) 
+  / 4. cos(x) 
+  + 0.25 (4. sin(x)^2 - 1. + sqrt(1. + 8. (1. - 2. sin(x)^2)^2)) sin(x) 
+      / cos(x)^2
+\end{verbatim}
+
+And in ``big'' notation:
+\begin{verbatim}
+% [calc-mode: language: big]
+
+				     2
+		   8. (1. - 2. sin(x) ) cos(x) sin(x)
+2. cos(x) sin(x) - ----------------------------------
+		       ____________________________    
+		      |                   2 2          
+		     \| 8. (1. - 2. sin(x) )  + 1.     
+----------------------------------------------------- +
+		       cos(x)                          
+
+		      ____________________________             
+		2    |                   2 2                   
+ 0.25 (4. sin(x)  + \| 8. (1. - 2. sin(x) )  + 1.  - 1.) sin(x)
+ --------------------------------------------------------------
+				  2                            
+			    cos(x)                             
+\end{verbatim}
+
+\newpage
+
+Here is the gnuplot program to generate this:
+
+\begin{verbatim}
+set output "plot2.tex"
+set autoscale
+set xlabel "$\phi$ axis"
+set nokey
+set ytics 0, 0.025
+set size 1.25, 1.5
+set nozeroaxis
+set xzeroaxis
+set format x "$%.2f$"
+set ylabel "$d'$ axis"
+set xtics -pi/4, pi/16
+set ytics -1.75, 0.25
+set title "$d' = \frac{2 \cos\phi \sin\phi -
+\frac{8\cos\phi \sin\phi ( 1-2\sin^2\phi ) }{\sqrt{8(1-2\sin^2\phi)^2 + 1}}}{\cos\phi} +
+\frac{(4\sin^2\phi + \sqrt{8(1-2\sin^2\phi)^2} -1)}{4\cos^2\phi} $\\[0.5cm]"
+f(x) = (((2.*(cos(x)*sin(x)) - ((8.*(cos(x)*(sin(x)*(1.-2.*(sin(x)*sin(x)))))) /
+sqrt(8.*((1.-2.*(sin(x)*sin(x)))*(1.-2.*(sin(x)*sin(x))))+1.)))/ cos(x)) +
+((sin(x)*((4.*(sin(x)*sin(x))) + sqrt(8.*((1.-(2.*((sin(x)*sin(x)))))*(1.-(2.*(sin(x)*sin(x)))))) -1.)) /
+4.*(cos(x)*cos(x))))
+plot [x=-pi/4:pi/4] [-1.75:1.75] f(x) with lines
+\end{verbatim}
+
+Here is the plot of the derivative:
+
+\begin{center}
+	\input plot2.tex
+\end{center}
+\end{document}

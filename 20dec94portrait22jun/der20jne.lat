@@ -1,0 +1,726 @@
+% file: der22may.lat
+\documentstyle[12pt]{article}
+\input dratex.sty
+\input aldratex.sty
+% \pagestyle{empty}
+\topmargin 0in\evensidemargin 0in\oddsidemargin 0in\headheight 0in\headsep 0in
+\textwidth 10in\textheight 7.25in % \footskip 0in
+% \topmargin -0.25in
+% \textheight 8.75in
+% \oddsidemargin 0in
+% \oddsidemargin 0.25in
+% \textwidth 6.5in 
+% \textwidth 6.25in
+\date{May 22, 1994}
+\begin{document}
+  \begin{center}\large\bf 
+    Derivation of Tensegrity Geometry\\
+    {\small\em John Kirk}\end{center}
+  \bigskip
+%    \DrawOff
+   \Draw
+     \Object\strut(2){ \I=#2;\I+90;\RotatedAxes(#2,\Val\I)
+       \MarkXLoc(#1a)\MarkLoc(a)\Move(90,0)\MarkLoc(b)\MarkXLoc(#1b)
+       \Move(-30,5)\MarkLoc(d)\Move(-30,0)\MarkLoc(c)
+       \Move(0,-10)\MarkLoc(e)\Move(30,0)\MarkLoc(f)\Move(-60,5)
+       \Curve(a,c,d,b)\Curve(a,e,f,b)\EndRotatedAxes }
+     \PenSize(2pt)\Scale(2,2)\strut(1,-90)
+     \MoveToLoc(1a)\Move(20,-30)\strut[2a](2,-30)
+     \MoveToLoc(1a)\Move(-20,-60)\strut[3a](3,150)
+     \MoveToLoc(1a)\Move(30,5)\strut[4a](4,150)
+     \PenSize(.6pt)\MoveToLoc(1a){\LineToLoc(2a)\LineToLoc(1b)}
+       {\LineToLoc(3a)\LineToLoc(1b)}{\LineToLoc(4a)}{\LineToLoc(4b)}
+     \MoveToLoc(1a)\Move(2,6)\Text(--$O$--)
+     \MoveToLoc(1b)\Move(5,-2)\Text(--Q--)
+     \MoveToLoc(2a)\Move(-5,-1)\Text(--A--)
+     \MoveToLoc(3a)\Move(5,2)\Text(--B--)
+     \MoveToLoc(4a)\Move(3,-5)\Text(--D--)
+     \MoveToLoc(4b)\Move(-3,-6)\Text(--C--)
+     \MoveToLoc(1a)\MoveToCurve[.5](1a,1b,1a,1b)\Text(--P--)
+     \Move(30,-20)\Text(--{\small Sphere Center}~~$S$--)
+     \EndDraw
+  
+  \bigskip\bigskip
+  \begin{tabular}{rl}
+    If & $\left[\vec{F}_{PO}\right]$ is the compressive vector force 
+           exerted by the strut $QPO$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OA}\right]$ is the tensive vector force 
+           exerted by the string $OA$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OB}\right]$ is the tensive vector force 
+           exerted by the string $OB$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OC}\right]$ is the tensive vector force 
+           exerted by the string $OC$ upon point $O$, and\\ [4pt]
+       & $\left[\vec{F}_{OD}\right]$ is the tensive vector force 
+           exerted by the string $OD$ upon point $O$\end{tabular}
+  
+  \smallskip
+  then the geometry of the tensegrity structure is completely characterized
+    by the force equilibrium equation for point $O$:
+  $$\left[\vec{F}_{PO}\right]
+   =\left[\vec{F}_{OA}\right]+\left[\vec{F}_{OB}\right]
+   +\left[\vec{F}_{OC}\right]+\left[\vec{F}_{OD}\right]$$
+\newpage  
+  which states that point $O$ is not moving because all applied forces
+    are in static equilibrium (no net force).
+  This can be restated 
+    (in more detail, separating magnitude from direction of force)
+    as follows:
+  $$m_{PO}\left[\vec{i}_{PO}\right]
+    =m_{OA}\left[\vec{i}_{OA}\right]+m_{OB}\left[\vec{i}_{OB}\right]
+    +m_{OC}\left[\vec{i}_{OC}\right]+m_{OD}\left[\vec{i}_{OD}\right]$$
+  where $m_{pq}$ is the magnitude 
+    and $\left[\vec{i}_{pq}\right]$ is the unit vector in the direction
+    from $p$ to $q$ of each force.
+  
+  Now, by symmetry strings $OA$ and $OD$ apply the same force to point $O$,
+    and similarly for strings $OB$ and $OC$, so:
+  $$m_{PO}\left[\vec{i}_{PO}\right]
+    =m_{ss}\left[\vec{i}_{OA}\right]+m_{ls}\left[\vec{i}_{OB}\right]
+    +m_{ls}\left[\vec{i}_{OC}\right]+m_{ss}\left[\vec{i}_{OD}\right]$$
+  where the force-magnitude subscripts $_{ss}$ and $_{ls}$ refer to 
+    the ``short'' and ``long'' strings in the diagram, respectively.
+  
+  \medskip
+  At this point, each of the force directions (the unit vectors)
+    can be represented as the direction of the structural component 
+    (strut or string) along which the force acts.
+  That is to say, if we represent each such component as a vector 
+    ($\vec{V}_{pq}$) from one of its endpoints, $p$, to the other, $q$,
+    oriented in the direction of action of the force along the component,
+    then we can take the direction of the force to be 
+    the direction of this vector.
+  This is written as the vector, $\vec{V}_{pq}$, 
+    divided by its length, $l_{pq}$, so:
+  $$\left[\vec{i}_{pq}\right]=\left[\frac{\vec{V}_{pq}}{l_{pq}}\right]$$
+  Substituting this expression for the force direction in the previous
+    equation:
+  $$m_{pq}\left[\vec{i}_{pq}\right]=
+    m_{pq}\left[\frac{\vec{V}_{pq}}{l_{pq}}\right]=
+    \frac{m_{pq}}{l_{pq}}\left[\vec{V}_{pq}\right]$$
+  
+  \medskip
+  so, therefore the equilibrium equation can be rewritten:
+  $$\frac{m_{PO}}{l_{PO}}\left[\vec{V}_{PO}\right]
+    =\frac{m_{ss}}{l_{ss}}\left[\vec{V}_{OA}\right]
+    +\frac{m_{ls}}{l_{ls}}\left[\vec{V}_{OB}\right]
+    +\frac{m_{ls}}{l_{ls}}\left[\vec{V}_{OC}\right]
+    +\frac{m_{ss}}{l_{ss}}\left[\vec{V}_{OD}\right]$$
+
+  \medskip
+  or, combining terms with identical coefficients:
+  $$\frac{m_{PO}}{l_{PO}}\left[\vec{V}_{PO}\right]
+    =\frac{m_{ss}}{l_{ss}}\left(\left[\vec{V}_{OA}\right]
+                         +\left[\vec{V}_{OD}\right]\right)
+    +\frac{m_{ls}}{l_{ls}}\left(\left[\vec{V}_{OB}\right]
+                         +\left[\vec{V}_{OC}\right]\right)$$
+  
+  \medskip
+  Now, if we consider only the components of force which act at point $O$ 
+    perpendicular to the axis ($QPO$) of the strut, 
+    then the compressive force contributed by the strut will be zero, 
+    so this part of the force equilibrium equation is:
+  $$\left[\vec{0}\right]
+    =\frac{m_{ss}}{l_{ss}}\left(\left[\vec{R}_{OA}\right]
+                         +\left[\vec{R}_{OD}\right]\right)
+    +\frac{m_{ls}}{l_{ls}}\left(\left[\vec{R}_{OB}\right]
+                         +\left[\vec{R}_{OC}\right]\right)$$
+  where each of the vectors $R$ is the {\em component} 
+    of the corresponding vector $V$ in the previous equation, 
+    that lies in the plane orthogonal to the strut.
+
+  \newpage
+  \medskip
+  Then, once again, we may consider separately the forces acting at point $O$
+  \begin{enumerate}
+    \item parallel to the axis, $SP$, of rotation of the strut 
+        through the transformation angle parameter, $\phi$, and
+    \item perpendicular to the strut axis and in the plane 
+        of the transformation rotation through angle $\phi$
+    \end{enumerate}
+  The two resulting scalar equations can be written in terms of
+    $\phi$ --- the angular transformation parameter, and 
+    $d$ --- the distance of the strut (point $P$) 
+    from the center of spherical symmetry, $S$, of the entire structure.
+  The equations can then be solved simultaneously to derive in a formula
+    for $d$ in terms of $\phi$.
+
+%   \newpage
+  \medskip
+  The two equations are:
+  $$0=\frac{m_{ss}}{l_{ss}}\left(z_{OA}+z_{OD}\right)
+     +\frac{m_{ls}}{l_{ls}}\left(z_{OB}+z_{OC}\right)$$
+  and:
+  $$0=\frac{m_{ss}}{l_{ss}}\left(x_{OA}+x_{OD}\right)
+     +\frac{m_{ls}}{l_{ls}}\left(x_{OB}+x_{OC}\right)$$
+
+  \medskip
+  With only slight rearrangement, they become:
+  $$-\frac{m_{ss}l_{ls}}{l_{ss}m_{ls}}
+    =\frac{\left(z_{OB}+z_{OC}\right)}{\left(z_{OA}+z_{OD}\right)}$$
+  and
+  $$-\frac{m_{ss}l_{ls}}{l_{ss}m_{ls}}
+    =\frac{\left(x_{OB}+x_{OC}\right)}{\left(x_{OA}+x_{OD}\right)}$$
+
+  \medskip
+  Combining the two, in preparation for solution:
+    $$\frac{\left(z_{OB}+z_{OC}\right)}{\left(z_{OA}+z_{OD}\right)}
+     =\frac{\left(x_{OB}+x_{OC}\right)}{\left(x_{OA}+x_{OD}\right)}$$
+
+  \medskip
+  which is the same as:
+    $$\left(z_{OB}+z_{OC}\right)\left(x_{OA}+x_{OD}\right)
+     =\left(x_{OB}+x_{OC}\right)\left(z_{OA}+z_{OD}\right)$$
+
+  \medskip
+  \begin{quote}\small
+    {\bf Note:} Everything to this point has been done without reference
+        to any coordinate system, and without reference to any particular
+        spherical tensegrity (as to 3--symmetry, 4--symmetry, etc.).
+      We now introduce a coordinate system in order to write formulas
+        for the coordinates of each of the points that appear 
+        in the force equilibrium equation above, in terms of
+        the parameters, $d$ and $\phi$. 
+      When we have formulas for the coordinates, we will solve the equation
+        above for $d$ in terms of $\phi$, and will then be in a position
+        to produce formulas for all lengths and angles 
+        of the tensegrity structure as well as coordinates for all points. 
+      \end{quote}
+  
+  \newpage
+  If the the configuration above is
+    taken to be from a six-strut (tetrahedral) tensegrity structure, and
+    considered with respect to a right-handed cartesian coordinate system:
+  \begin{quote}\begin{enumerate}
+    \item whose origin, $S$, is at the center of gravity
+      of the entire spherical tensegrity, and
+    \item whose $Z$ axis passes through point  $P$ of strut $OPQ$, 
+      where point $P$ is distance $d$ from point $S$, and
+    \item whose $X$, $Y$ and $Z$ units are each equal to 
+      half the length of the strut (i.e. $\overline{PO}$), and
+    \item such that the axis of the strut lies at a 45 degree angle
+      from the $XZ$ and $YZ$ planes, with point $O$ in the quadrant
+      where both $X$ and $Y$ are positive.
+    \end{enumerate}\end{quote}
+  
+  \smallskip
+  then the coordinates of each of the labelled points in the figure
+    can be written by inspection at three points in the rotation
+    by $\phi$, as the geometry is known at these points:
+  
+  $$\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+     \multicolumn{5}{c}{\phi = 0 \Longrightarrow
+                         d = \frac{\sqrt{2}}{2}}                            \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates}                                \\ [4pt]
+    O: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    P: && 0                   & 0                   &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    Q: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    A: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    B: && -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    C: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \\ [3pt]
+    D: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & \\ [3pt]
+    S: && 0                   & 0                   & 0                   & \\ [3pt]
+    \end{array}  \hspace{2cm}
+\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+  \multicolumn{5}{c}{\phi = \frac{\pi}{4} \Longrightarrow
+   d = \frac{1}{2}}                  \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates} \\ [4pt]
+    O: && 0            & 1           & \frac{1}{2} & \\ [3pt]
+    P: && 0            & 0           & \frac{1}{2} & \\ [3pt]
+    Q: && 0            & -1          & \frac{1}{2} & \\ [3pt]
+    A: && \frac{1}{2}  & 0           & 1           & \\ [3pt]
+    B: && -\frac{1}{2} & 0           & 1           & \\ [3pt]
+    C: &&  -1          & \frac{1}{2} & 0           & \\ [3pt]
+    D: && 1            & \frac{1}{2} & 0           & \\ [3pt]
+    S: && 0            & 0           & 0           & \\ [3pt]
+    \end{array}  \hspace{2cm}
+\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+  \multicolumn{5}{c}{\phi = \frac{\pi}{2} \Longrightarrow
+   d = \frac{\sqrt{2}}{2}}                  \\ [4pt]
+    point &  \multicolumn{5}{c}{coordinates} \\ [4pt]
+    O: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    P: && 0                   & 0                   &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    Q: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    A: &&  \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    B: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    C: &&  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           -\frac{\sqrt{2}}{2} & \\ [3pt]
+    D: && -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &
+           \frac{\sqrt{2}}{2} & \\ [3pt]
+    S: && 0                   & 0                   & 0
+& \\ [3pt]
+    \end{array}$$
+  
+  From this position, strut $OPQ$ can be rotated about the $Z$ axis 
+    through the angle $\phi$ (where $\phi$ is between $0$ and $\pi/2$) 
+    and translated to a distance $d$ from the origin
+    to get coordinate formulas for the general-case position of the strut.
+  To do this, we write a matrix consisting of the first three rows above,
+    but converted to {\em homogeneous coordinates}, 
+    by adding a fourth coordinate whose value is unity to each vector (row).
+  Then we post-multiply this coordinate matrix
+    by the bilinear transformation matrix for rotation about the $Z$ axis
+    and the translation:
+
+  $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}  & \frac{\sqrt{2}}{2}  & \frac{\sqrt{2}}{2} & 1 \\ [5pt]
+      0                   & 0                   & \frac{\sqrt{2}}{2} & 1 \\ [5pt]
+      -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \cos\phi & \sin\phi & 0                       & 0 \\ [5pt]
+      -\sin\phi & \cos\phi & 0                       & 0 \\ [5pt]
+      0         & 0        & 1                       & 0 \\ [5pt]
+      0         & 0        & -(\frac{\sqrt{2}}{2}-d) & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+                                                  0 & 0 & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 
+     \end{array}\right]$$
+
+%     \newpage
+    \medskip
+    Top to back (for CD) --- rotate -90 w/o $Z$, then -90 w/o $X$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & -1 & 0 & 0 \\ [5pt]
+     1 &  0 & 0 & 0 \\ [5pt]
+     0 &  0 & 1 & 0 \\ [5pt]
+     0 &  0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     1 & 0 &  0 & 0 \\ [5pt]
+     0 & 0 & -1 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]$$
+    
+    \medskip
+    For $D$ and $C$ ($O \to D$ and $Q \to C$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1 
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+     -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d &
+      \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1
+     \end{array}\right]$$
+
+    \bigskip\bigskip
+    Top to left (for $B$) --- rotate -90 w/o $Z$, then -90 w/o $Y$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & -1 & 0 & 0 \\ [5pt]
+     1 &  0 & 0 & 0 \\ [5pt]
+     0 &  0 & 1 & 0 \\ [5pt]
+     0 &  0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 0 & 1 & 0 \\ [5pt]
+      0 & 1 & 0 & 0 \\ [5pt]
+     -1 & 0 & 0 & 0 \\ [5pt]
+      0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & -1 & 0 & 0 \\ [5pt]
+      0 &  0 & 1 & 0 \\ [5pt]
+     -1 &  0 & 0 & 0 \\ [5pt]
+      0 &  0 & 0 & 1 \end{array}\right]$$
+    
+    \medskip
+    For $B$ ($O \to B$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & -1 & 0 & 0 \\ [5pt]
+      0 &  0 & 1 & 0 \\ [5pt]
+     -1 &  0 & 0 & 0 \\ [5pt]
+      0 &  0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     -d & \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+          \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+     \end{array}\right]$$
+
+    \newpage
+    \medskip
+    Top to right (for $A$) --- rotate 90 w/o $Z$, then 90 w/o $Y$:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 1 & 0 & 0 \\ [5pt]
+     -1 & 0 & 0 & 0 \\ [5pt]
+      0 & 0 & 1 & 0 \\ [5pt]
+      0 & 0 & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 0 & -1 & 0 \\ [5pt]
+     0 & 1 &  0 & 0 \\ [5pt]
+     1 & 0 &  0 & 0 \\ [5pt]
+     0 & 0 &  0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]$$
+    
+    \medskip
+    For $A$ ($O \to A$):
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d & 1
+     \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     0 & 1 & 0 & 0 \\ [5pt]
+     0 & 0 & 1 & 0 \\ [5pt]
+     1 & 0 & 0 & 0 \\ [5pt]
+     0 & 0 & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+         \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1
+     \end{array}\right]$$
+  
+  \medskip
+  So, in the general case:
+
+  $$\begin{array}{c@{\hspace{3pt}}c@{\Bigm[}c@{,}c@{,}c@{\Bigm]}c}
+    point &  \multicolumn{5}{c}{coordinates}                          \\ [4pt]
+    O:    &&  \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+              \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & \\ [3pt]
+    P:    && 0                   & 0                           & d  & \\ [3pt]
+    Q:    &&  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+             -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & \\ [3pt]
+    A:    &&  d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)  &
+                  \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)  & \\ [3pt]
+    B:    && -d &  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+                   \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & \\ [3pt]
+    C:    && -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+              \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)      & \\ [3pt]
+    D:    &&  \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+              \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)      & \\ [3pt]
+    S:    && 0                   & 0                           & 0  & \\ [3pt]
+    \end{array}$$
+  
+  \newpage
+  \medskip
+  Next, rotate $-\pi/4$, then $\phi$ around the $Z$ axis,
+    by use of the following transformation matrix:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & 0 & 0 \\ [5pt]
+     -\frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} & 0 & 0 \\ [5pt]
+      0                  & 0                   & 1 & 0 \\ [5pt]
+      0                  & 0                   & 0 & 1 \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \cos\phi & -\sin\phi & 0 & 0 \\ [5pt]
+       \sin\phi &  \cos\phi & 0 & 0 \\ [5pt]
+      0         & 0        & 1 & 0 \\ [5pt]
+      0         & 0        & 0 & 1 \end{array}\right]
+    =\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 0 & 0 \\ [5pt]
+     \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 0 & 0 \\ [5pt]
+     0                      & 0                       & 1 & 0 \\ [5pt]
+     0                      & 0                       & 0 & 1 
+     \end{array}\right]$$
+    
+  \medskip
+  Applying the transformation to the points:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & 1 \\ [5pt]
+        0                   & 0                         & d  & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  & 1 \\ [5pt]
+       d & \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)  &
+           \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)  & 1 \\ [5pt]
+      -d &  \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) &
+            \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 1 \\ [5pt]
+      -\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)      & 1 \\ [5pt]
+       \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & d  &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)      & 1 \\ [5pt]
+        0                   & 0                         & 0  & 1
+      \end{array}\right]
+    \left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 0 & 0 \\ [5pt]
+     \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 
+     \frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right) & 0 & 0 \\ [5pt]
+     0                      & 0                       & 1 & 0 \\ [5pt]
+     0                      & 0                       & 0 & 1 
+     \end{array}\right]$$
+    
+    \medskip
+    The first point ($O$) is:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                          \left(\cos\phi-\sin\phi\right)
+     -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                          \left(\cos\phi-\sin\phi\right)   &
+      \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)^2
+     +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)^2 &
+      d & 1 \\ [5pt]
+      \end{array}\right]$$
+
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & \frac{1}{2}\left(\cos^2\phi-2\cos\phi\sin\phi+\sin^2\phi\right)
+      +\frac{1}{2}\left(\cos^2\phi+2\cos\phi\sin\phi+\sin^2\phi\right) & d & 1 \\ [5pt]
+      \end{array}\right]$$
+
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & \frac{1}{2}\left(\cos^2\phi-2\cos\phi\sin\phi+\sin^2\phi
+                      +\cos^2\phi+2\cos\phi\sin\phi+\sin^2\phi\right) & d & 1 \\ [5pt]
+      \end{array}\right]$$
+
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      0 & 1 & d & 1 \\ [5pt]
+      \end{array}\right]$$
+
+    The second point ($A$) is:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+       \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)^2 &
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right)
+                                           \left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+       \frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right)
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    The third point ($B$) is:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right)^2 &
+       \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+      +\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\sin\phi-\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}
+      -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+      +\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+       \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+      +\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    The fourth point ($C$) is:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+      -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\sin\phi-\cos\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+      -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+       \frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    The fifth point ($D$) is:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+       \frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+      -\frac{\sqrt{2}}{2}\frac{\sqrt{2}}{2}\left(\sin\phi+\cos\phi\right)
+                                           \left(\sin\phi-\cos\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+    
+    \medskip
+    Or:
+    $$\left[\begin{array}{c@{\:,\:}c@{\:,\:}c@{\:,\:}c}    
+       \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+      -\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 \\ [5pt]
+      \end{array}\right]$$
+  
+  \medskip
+  So, gathering all the points together:
+    $$\begin{array}{cc@{\Bigm[}c@{\:,\:}c@{\:,\:}c@{\:,\:}cc@{\Bigm]}}
+ O: && 0 & 1 & d & 1 & \\[5pt]
+ A: && \frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+     -\frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\cos^2\phi-\sin^2\phi\right) &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 & \\[5pt]
+ B: && -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 &
+      \frac{\sqrt{2}}{2}d\left(\sin\phi-\cos\phi\right)
+     +\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right) &
+      \frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) & 1 & \\[5pt]
+ C: && -\frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+       \frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right) & 1 & \\[5pt]
+ D: && \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+      -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) &
+      -\frac{1}{2}\left(\sin^2\phi-\cos^2\phi\right)
+      +\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right) &
+       \frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) & 1 & \\[5pt]
+     \end{array}$$
+  
+Recall the equilibrium equation for our class of symmetrical
+   tensegities:
+    $$\left(z_{OB}+z_{OC}\right)\left(x_{OA}+x_{OD}\right)
+     =\left(x_{OB}+x_{OC}\right)\left(z_{OA}+z_{OD}\right)$$
+
+This becomes:
+   $$ (| z_{B}-z_{O}| + |z_{C} - z_{O}|)(|x_{A} - x_{O}| +
+      |x_{D} - x_{O}|) = (|x_{B}-x_{O}| + |x_{C}-x_{O}|)(z_{A} -
+      z_{O}| + |z_{D}-z_{O}|) $$
+ where $z_{p}$ and $x_{p}$ are the $z$ and $x$ components of point $p$
+ in our coordinate system centered at $O$.
+ 
+By inspection of the model, it can be seen that $z_{B} > z_{O}$,
+ $z_{O} > z_{C}$, $x_{A} > x_{O}$, $x_{D} > x_{O}$, $x_{O} > x_{D}$,
+ $x_{O} > x_{C}$, $z_{A} > z_{O}$, and $z_{O} > z_{D}$.
+
+Therefore (also noting that $x_{O}=0$), \begin{eqnarray}
+ (z_{B} - z_{O} + z_{O} - z_{C})(x_{A} - x_{O} + x_{D} - x_{O}) & = &
+ (x_{O} - x_{B} + x_{O} - x_{C})(z_{A} - z_{O} + z_{O} - z_{D}) \nonumber\\
+ \Longleftrightarrow (z_{B} - z_{C}) (x_{A} - 2x_{O} + x_{D}) & = &
+    (2x_{O} - x_{B} - x_{C}) (z_{A} - z_{D}) \nonumber\\
+ \Longleftrightarrow (z_{B} - z_{C}) (x_{A} + x_{D}) & = &
+    ( - x_{B} - x_{C}) (z_{A} - z_{D}) \nonumber
+\end{eqnarray}
+ 
+We can now substitute the coordinates for $O$, $A$, $B$, $C$, and $D$
+as determined by our last bilinear transformation.  Let's do it
+piecewise.
+$$ z_{B} - z_{C} = \left(
+\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) -
+   \frac{\sqrt{2}}{2}\left(\sin\phi-\cos\phi\right)\right) = \sqrt{2}
+\cos \phi
+ $$
+And
+$$ x_{A} + x_{D} =
+\left(\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+   -\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 +
+   \frac{1}{2}\left(\sin\phi+\cos\phi\right)^2
+   -\frac{\sqrt{2}}{2}d\left(\cos\phi-\sin\phi\right) \right) 
+  = 2 \cos\phi \sin\phi + d \sqrt{2} \sin\phi $$
+%
+% The above was derived from GNU Calc as follows:
+% [calc-mode: symbolic: t]
+% [calc-mode: fractions: t]
+% [calc-mode: angles: rad]
+% z_B - z_C is
+% ((sqrt(2)/2)(cos(x)+sin(x)) - (sqrt(2)/2)(sin(x)-cos(x)))
+% which becomes
+% cos(x) sqrt(2)
+%
+% x_A + x_D is
+% ((sqrt(2)/2)(d)(sin(x)+cos(x)) -(1/2)(cos(x)-sin(x))^2 +
+% (1/2)(sin(x)+cos(x))^2 - (sqrt(2)/2)(d)(cos(x)-sin(x)) )
+% which becomes
+% 2 cos(x) sin(x) + d sin(x) sqrt(2)
+%
+Now,
+$$ - x_{B} - x_{C} = 
+    -\left( -\frac{\sqrt{2}}{2}d\left(\sin\phi+\cos\phi\right)
+     +\frac{1}{2}\left(\cos\phi-\sin\phi\right)^2 \right) -
+   \left( -\frac{1}{2}(\sin\phi+\cos\phi)^2
+      -\frac{\sqrt{2}}{2}d(\cos\phi-\sin\phi) \right)
+   = d \sqrt{2} \sin\phi + 1 $$
+And
+$$ z_{A} - z_{D} = 
+\frac{\sqrt{2}}{2}\left(\cos\phi+\sin\phi\right) -
+\frac{\sqrt{2}}{2}\left(\cos\phi-\sin\phi\right) = \sqrt{2}\sin \phi $$ 
+% Here is calc's demonstration of the above
+% -x_B - x_C is
+%
+%   -( -(sqrt(2)/2) d*(sin(x)+cos(x))
+%      -(1/2)(cos(x)-sin(x))^2 ) -
+%    ( -(1/2)((sin(x)+cos(x))^2)
+%       +(sqrt(2)/2) d*(cos(x)-sin(x)) )
+%
+% which becomes
+% 1 + d sin(x) sqrt(2)
+%
+% and z_A - z_D is
+%    (sqrt(2)/2) (cos(x)+sin(x)) -
+%    (sqrt(2)/2) (cos(x)-sin(x)) 
+% which becomes
+% sin(x) sqrt(2)
+% 
+Combining these four results we get an equation which we can
+ solve for $\phi$:
+$$ \sqrt{2} \cos \phi\left( 2 \cos\phi \sin\phi + d \sqrt{2}
+\sin\phi\right) =  \sqrt{2} \sin \phi \left( d \sqrt{2} \sin\phi + 1\right) $$
+%
+% Let's see if Calc can solve it:
+% (z_B - z_C)(x_A + x_D) = (-x_B - x_C)(z_A - z_D)
+% which is
+%
+% cos(x) sqrt(2)(2 cos(x) sin(x) + d sin(x) sqrt(2)) =
+%    (1 + d sin(x) sqrt(2))sin(x) sqrt(2)
+%
+% 2 cos(x)^2 sin(x) sqrt(2) + 2 d cos(x) sin(x) = sin(x) sqrt(2) + 2 d sin(x)^2
+%
+% 2 (d + cos(x) sqrt(2)) cos(x) sin(x) = (sqrt(2) + 2 d sin(x)) sin(x)
+%
+% d = (sin(x) sqrt(2) - 2 cos(x)^2 sin(x) sqrt(2)) 
+%      / (2 cos(x) sin(x) - 2 sin(x)^2)
+%
+% d = (1 - 2 cos(x)^2) sqrt(2) / 2 (cos(x) - sin(x))
+%
+% [calc-mode: language: big]
+%
+%                  2   ___
+%     (1 - 2 cos(x) ) V 2
+% d = --------------------
+%     2 (cos(x) - sin(x))
+%
+After some manipulation we conclude:
+$$ d = \frac{\sqrt{2}\left(1 - 2 \cos^2\phi\right)}{2(\cos\phi
+       - \sin\phi)} $$
+\newpage
+And its plot (which is wrong):\\[1cm]
+\begin{center}
+\input derplot1.tex
+\end{center}
+  \end{document}
